@@ -261,48 +261,6 @@ class Bits extends Component {
           </div>
 
           <div className="project-item" style={{ visibility: 'hidden' }}>
-            {/* <h3>Project 8</h3> */}
-            <div className="project-thumbnail">
-              <img
-                className="project-placeholder"
-                src="/img/sgt-logo.png"
-                alt="Thumbnail of project."
-              />
-            </div>
-            <p>
-              ...
-            </p>
-          </div>
-
-          <div className="project-item" style={{ visibility: 'hidden' }}>
-            {/* <h3>Project 9</h3> */}
-            <div className="project-thumbnail">
-              <img
-                className="project-placeholder"
-                src="/img/sgt-logo.png"
-                alt="Thumbnail of project."
-              />
-            </div>
-            <p>
-              ...
-            </p>
-          </div>
-
-          <div className="project-item" style={{ visibility: 'hidden' }}>
-            {/* <h3>Project 10</h3> */}
-            <div className="project-thumbnail">
-              <img
-                className="project-placeholder"
-                src="/img/sgt-logo.png"
-                alt="Thumbnail of project."
-              />
-            </div>
-            <p>
-              ...
-            </p>
-          </div>
-
-          <div className="project-item" style={{ visibility: 'hidden' }}>
             {/* <h3>Project 11</h3> */}
             <div className="project-thumbnail">
               <img
