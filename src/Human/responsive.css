@@ -1,0 +1,95 @@
+@media (max-width: 970px) {
+
+  .human-description {
+    font-size: 100%;
+  }
+
+}
+
+@media (max-width: 932px) {
+
+  .human-description {
+    font-size: 90%;
+  }
+
+}
+
+@media (max-width: 830px) {
+
+  .human-description {
+    font-size: 80%;
+  }
+
+}
+
+@media (max-width: 784px) {
+
+  .human-wrapper {
+    margin: 0 1em 0 0;
+    display: block;
+  }
+
+  .human-photo {
+    padding: 0 0 0 0;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .tabs {
+    margin-left: 0;
+  }
+
+  .human-description {
+    font-size: 90%;
+  }
+
+}
+
+@media (max-width: 666px) {
+
+  .tab-list-item,
+  .human-description {
+    font-size: 90%;
+  }
+
+}
+
+@media (max-width: 570px) {
+
+  .tab-list-item,
+  .human-description {
+    font-size: 80%;
+  }
+
+}
+
+@media (max-width: 441px) {
+
+  .human-wrapper {
+    /* text-align: left; */
+  }
+
+  .tab-list-item {
+    font-size: 70%;
+  }
+
+}
+
+/* iPhone */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+    .tab-list-item,
+    .human-description {
+      font-size: 90%;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+  .human-wrapper {
+    padding: 0 0 0 0.5em;
+  }
+    .tab-list-item {
+      font-size: 68%;
+    }
+}

@@ -1,17 +1,9 @@
 import React, { Component } from "react";
+import Typist from "react-typist";
+import "./style.css";
 
 class Home extends Component {
   render() {
-    // query select the body
-
-    // pass object into FastClick containing content selector, on-navigate (callback function)
-
-    // rotate text
-
-    // let the drawer...
-
-    // 
-
     return (
       <div className="content js-content" data-page="home">
         <header className="hero">
@@ -20,25 +12,51 @@ class Home extends Component {
           </div>
           <div className="home-title">
             <h1 className="title">
-              Hello.
-              <br />
-              I'm <strong className="emphasize">
-                Simon
-              </strong>,<br />a <strong className="emphasize js-rotate">
-                web developer
-              </strong>
-              <br />
-              in New York City.
+              <div className="title-wrapper">
+                Hello.
+                <br />
+                I'm <strong className="emphasize">Simon</strong>,<br />
+                <Typist>
+                  <span>
+                    a <strong className="emphasize">web developer</strong>
+                  </span>
+                  <Typist.Backspace count={15} delay={2000} />
+                  <span>
+                    a <strong className="emphasize">photographer</strong>
+                  </span>
+                  <Typist.Backspace count={14} delay={2000} />
+                  <span>
+                    an <strong className="emphasize">instructor</strong>
+                  </span>
+                  <Typist.Backspace count={13} delay={2000} />
+                  <span>
+                    a <strong className="emphasize">web developer</strong>
+                  </span>
+                </Typist>
+                in New York City.
+              </div>
+              <span className="subtitle">
+                Knowledgeable in the design, development, integration and
+                delivery of web applications.
+              </span>
             </h1>
-            
+
             <ul className="home-fa">
               <li>
-                <a href="https://linkedin.com/in/simongt" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://linkedin.com/in/simongt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-linkedin" />
                 </a>
               </li>
               <li>
-                <a href="https://github.com/simongt" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/simongt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-github" />
                 </a>
               </li>
@@ -48,7 +66,6 @@ class Home extends Component {
                 </a>
               </li>
             </ul>
-            
           </div>
         </header>
       </div>

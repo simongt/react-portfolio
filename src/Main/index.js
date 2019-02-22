@@ -1,32 +1,39 @@
 import React, { Component } from "react";
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import { 
+  Route,
+  NavLink,
+  HashRouter,
+  Switch
+} from "react-router-dom";
+
 import Home from "../Home";
 import Bits from "../Bits";
-import Sights from "../Sights";
+import Pieces from "../Pieces";
 import Human from "../Human";
+
 import "./style.css";
+import "./responsive.css";
 
 class Main extends Component {
-  
   render() {
-    return <HashRouter>
-        <div className="Main">
-          {/* <h1 className="main title">Website</h1> */}
+    return (
+      <HashRouter>
+        <div className="main">
           <div className="menu-container">
             <ul className="header-left">
               <li>
-                <img src="/img/sgt-logo.png" alt="SGT" />
+                {/* Home component is linked to top left image */}
+                <a href="/">
+                  <img src="/img/sgt-logo.png" alt="SGT" />
+                </a>
               </li>
             </ul>
             <ul className="header-right">
               <li>
-                <NavLink exact to="/">Home</NavLink>
-              </li>
-              <li>
                 <NavLink to="/bits">Bits</NavLink>
               </li>
               <li>
-                <NavLink to="/sights">Sights</NavLink>
+                <NavLink to="/pieces">Pieces</NavLink>
               </li>
               <li>
                 <NavLink to="/human">Human</NavLink>
@@ -34,13 +41,16 @@ class Main extends Component {
             </ul>
           </div>
           <div className="content">
-            <Route exact path="/" component={Home} />
-            <Route path="/bits" component={Bits} />
-            <Route path="/sights" component={Sights} />
-            <Route path="/human" component={Human} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/bits" component={Bits} />
+              <Route path="/pieces" component={Pieces} />
+              <Route path="/human" component={Human} />
+            </Switch>
           </div>
         </div>
-      </HashRouter>;
+      </HashRouter>
+    );
   }
 }
 

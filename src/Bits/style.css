@@ -1,0 +1,211 @@
+html, body {
+  overflow-x: hidden;
+}
+
+.bits-content {
+  display: grid;
+  place-items: center center;
+  min-height: calc(100vh - 100px);
+  /* min-width: 100vmin; */
+  /* max-width: 960px; */
+  padding: calc(100vmax/50);
+}
+
+.projects-container {
+  /* margin: 0 10px 0 0; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.projects-container h3 {
+  text-align: center;
+}
+
+.projects-container p {
+  text-align: justify;
+}
+
+.project-item {
+  min-width: 25em;
+  height: 29em;
+  /* min-width: calc(100vmin - 100vmin/2); */
+  background-color: rgba(0, 0, 0, 0.4);
+  flex: 1;
+  margin: 0 .5em 1em .5em;
+  padding: 1em;
+  border: 1px rgba(255, 255, 255, 0) solid;
+  border-radius: .5em;
+  /* border: 1px white dashed; */
+}
+
+.project-item:hover {
+  background-color: rgba(105, 0, 234, 0.25);
+  border: 1px rgba(255, 255, 255, 1) solid;
+  border-radius: 10px;
+}
+
+.project-thumbnail {
+  margin: 0.5em 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.project-thumbnail img {
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+}
+
+.project-placeholder {
+  max-height: 25%;
+  max-width: 25%;
+}
+
+.icon-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}
+
+.font-sampler {
+  display: none;
+}
+
+.encodeSansCondensedThin {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 100;
+}
+
+.encodeSansCondensedExtraLight {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 200;
+}
+
+.encodeSansCondensedLight {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 300;
+}
+
+.encodeSansCondensedRegular {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 400;
+}
+
+.encodeSansCondensedMedium {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 500;
+}
+
+.encodeSansCondensedSemiBold {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 600;
+}
+
+.encodeSansCondensedBold {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.encodeSansCondensedExtraBold {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 800;
+}
+
+.encodeSansCondensedBlack {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 900;
+}
+
+.openSansThin {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+.openSansExtraLight {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+
+.openSansLight {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.openSansRegular {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.openSansMedium {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.openSansSemiBold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.openSansBold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.openSansExtraBold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+.openSansBlack {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+}
+
+.quicksandLight {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.quicksandRegular {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.quicksandMedium {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.quicksandBold {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.robotoMonoThin {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+}
+
+.robotoMonoLight {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+
+.robotoMonoRegular {
+  font-family: 'Quicksand', monospace;
+  font-weight: 400;
+}
+
+.robotoMonoMedium {
+  font-family: 'Quicksand', monospace;
+  font-weight: 500;
+}
+
+.robotoMonoBold {
+  font-family: 'Quicksand', monospace;
+  font-weight: 700;
+}
