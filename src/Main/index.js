@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { 
   Route,
   NavLink,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch
 } from "react-router-dom";
 
@@ -46,6 +46,7 @@ class Main extends Component {
               <Route path="/bits" component={Bits} />
               <Route path="/pieces" component={Pieces} />
               <Route path="/human" component={Human} />
+              <Route path="*" component={Home} />
             </Switch>
           </div>
         </div>

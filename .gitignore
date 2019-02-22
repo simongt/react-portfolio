@@ -9,8 +9,8 @@
 # production
 /build
 
-/public/img
-/public/js
+# /public/img
+# /public/js
 
 # misc
 .DS_Store

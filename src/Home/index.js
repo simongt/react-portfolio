@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Typist from "react-typist";
+import "babel-polyfill";
 import "./style.css";
 
 class Home extends Component {
