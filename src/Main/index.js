@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { 
   Route,
   NavLink,
-  HashRouter,
+  BrowserRouter as Router,
   Switch
 } from "react-router-dom";
 
@@ -17,7 +17,7 @@ import "./responsive.css";
 class Main extends Component {
   render() {
     return (
-      <HashRouter>
+      <Router>
         <div className="main">
           <div className="menu-container">
             <ul className="header-left">
@@ -49,7 +49,7 @@ class Main extends Component {
             </Switch>
           </div>
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 }
