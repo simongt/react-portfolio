@@ -17,7 +17,7 @@ class Bits extends Component {
             </div>
             <p> {/* Project Description */}
               Used CSS Grid + FlexBox, JavaScript and React to create a
-              web-responsive portfolio site that alternates page views using
+              responsive portfolio website that alternates page views using
               React Router.
             </p>
             <ul className="icon-links">
@@ -242,7 +242,7 @@ class Bits extends Component {
           <div className="project-item" style={{ visibility: 'hidden' }}> {/* Project Container */}
             <h3> {/* Project Title */} </h3>
             <div className="project-thumbnail">
-            <a href="https://github.com/simongt"> {/* Live Link */}
+            <a href="https://simongt.net"> {/* Live Link */}
               <img
                 className="project-placeholder"
                 src="/img/sgt-logo.png"
@@ -256,7 +256,7 @@ class Bits extends Component {
                 <a href="https://github.com/simongt">GitHub</a>
               </li>
               <li> {/* Live Link */}
-                <a href="https://github.com/simongt">Live</a>
+                <a href="https://simongt.net">Live</a>
               </li>
             </ul>
           </div>
@@ -264,7 +264,7 @@ class Bits extends Component {
           <div className="project-item" style={{ visibility: 'hidden' }}> {/* Project Container */}
             <h3> {/* Project Title */} </h3>
             <div className="project-thumbnail">
-            <a href="https://github.com/simongt"> {/* Live Link */}
+            <a href="https://simongt.net"> {/* Live Link */}
               <img
                 className="project-placeholder"
                 src="/img/sgt-logo.png"
@@ -278,7 +278,7 @@ class Bits extends Component {
                 <a href="https://github.com/simongt">GitHub</a>
               </li>
               <li> {/* Live Link */}
-                <a href="https://github.com/simongt">Live</a>
+                <a href="https://simongt.net">Live</a>
               </li>
             </ul>
           </div>
