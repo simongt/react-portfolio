@@ -96,7 +96,7 @@ class Bits extends Component {
 
           {/* Project Container */}
           <div className="project-item">
-            <h3>To-Do List Manager (React)</h3>
+            <h3>List Manager (React)</h3>
             <div className="project-thumbnail">
               {/* Live Link */}
               <a href="https://simongt.github.io/react-to-do-list/">
@@ -105,7 +105,7 @@ class Bits extends Component {
             </div>
             {/* Project Description */}
             <p>
-              Used React, JavaScript, FlexBox, CSS and SVG's to build ongoing project that manages to-do lists (desktop ready, best viewed on Chrome). Backlog includes implementation of LocalStorage.
+              Used React, FlexBox, CSS and SVG's to build ongoing project that manages to-do lists (desktop ready, best viewed on Chrome).
             </p>
             <ul className="icon-links">
               {/* Repo Link */}
