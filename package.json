@@ -1,0 +1,33 @@
+{
+  "name": "simongt-net",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
+    "lodash": "^4.17.10",
+    "node-sass-chokidar": "^1.3.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-image-gallery": "^0.8.14",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "react-tabs": "^2.3.0",
+    "react-transition-group": "^2.4.0",
+    "react-typist": "^2.0.4",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "https://simongt.net"
+}
