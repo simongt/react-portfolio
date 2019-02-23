@@ -240,9 +240,9 @@ class Bits extends Component {
           </div>
 
           <div className="project-item" style={{ visibility: 'hidden' }}> {/* Project Container */}
-            <h3 /> {/* Project Title */}
+            <h3> {/* Project Title */} </h3>
             <div className="project-thumbnail">
-            <a href="#"> {/* Live Link */}
+            <a href="https://github.com/simongt"> {/* Live Link */}
               <img
                 className="project-placeholder"
                 src="/img/sgt-logo.png"
@@ -253,18 +253,18 @@ class Bits extends Component {
             <p /> {/* Project Description */}
             <ul className="icon-links">
               <li> {/* Repo Link */}
-                <a href="#">GitHub</a>
+                <a href="https://github.com/simongt">GitHub</a>
               </li>
               <li> {/* Live Link */}
-                <a href="#">Live</a>
+                <a href="https://github.com/simongt">Live</a>
               </li>
             </ul>
           </div>
 
           <div className="project-item" style={{ visibility: 'hidden' }}> {/* Project Container */}
-            <h3 /> {/* Project Title */}
+            <h3> {/* Project Title */} </h3>
             <div className="project-thumbnail">
-            <a href="#"> {/* Live Link */}
+            <a href="https://github.com/simongt"> {/* Live Link */}
               <img
                 className="project-placeholder"
                 src="/img/sgt-logo.png"
@@ -275,10 +275,10 @@ class Bits extends Component {
             <p /> {/* Project Description */}
             <ul className="icon-links">
               <li> {/* Repo Link */}
-                <a href="#">GitHub</a>
+                <a href="https://github.com/simongt">GitHub</a>
               </li>
               <li> {/* Live Link */}
-                <a href="#">Live</a>
+                <a href="https://github.com/simongt">Live</a>
               </li>
             </ul>
           </div>
