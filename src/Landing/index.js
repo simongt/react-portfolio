@@ -9,40 +9,46 @@ class Home extends Component {
     return (
       <div className="content js-content" data-page="home">
         <header className="hero">
-          <div className="home-avatar">
-            <img src="/img/avatar-brown.png" alt="Avatar" />
-          </div>
+          <Fade>
+            <div className="home-avatar">
+              <img src="/img/avatar-brown.png" alt="Avatar" />
+            </div>
+          </Fade>
           <div className="home-title">
             <h1 className="title">
               <div className="title-wrapper">
-                <span>Hello.</span>
+                <Fade>
+                  <span>Hello.</span>
+                </Fade>
                 <br />
-                <span>
-                  I'm <strong className="emphasize">Simon</strong>,
-                </span>
-                <br />
-                <Typist>
+                <Fade delay={1250}>
                   <span>
-                    a <strong className="emphasize">web developer</strong>
+                    I'm <strong className="emphasize">Simon</strong>,
                   </span>
-                  <Typist.Backspace count={15} delay={5000} />
+                  <br />
+                  <Typist>
+                    <span>
+                      a <strong className="emphasize">web developer</strong>
+                    </span>
+                    <Typist.Backspace count={15} delay={5000} />
+                    <span>
+                      a <strong className="emphasize">photographer</strong>
+                    </span>
+                    <Typist.Backspace count={14} delay={2000} />
+                    <span>
+                      an <strong className="emphasize">instructor</strong>
+                    </span>
+                    <Typist.Backspace count={13} delay={2000} />
+                    <span>
+                      a <strong className="emphasize">web developer</strong>
+                    </span>
+                  </Typist>
                   <span>
-                    a <strong className="emphasize">photographer</strong>
+                    in New York City.
                   </span>
-                  <Typist.Backspace count={14} delay={2000} />
-                  <span>
-                    an <strong className="emphasize">instructor</strong>
-                  </span>
-                  <Typist.Backspace count={13} delay={2000} />
-                  <span>
-                    a <strong className="emphasize">web developer</strong>
-                  </span>
-                </Typist>
-                <span>
-                  in New York City.
-                </span>
+                </Fade>
               </div>
-              <Fade top>
+              <Fade top delay={2500}>
                 <span className="subtitle">
                   Knowledgeable in the design, development, integration and
                   delivery of web applications.
@@ -50,7 +56,7 @@ class Home extends Component {
               </Fade>
             </h1>
 
-            <Flip left cascade delay={250}>
+            <Flip left cascade delay={3250}>
               <ul className="home-fa">
                 <li>
                   <a
