@@ -4,12 +4,3 @@
   max-width: calc(100vw - 50px);
   max-height: calc(100vh - 150px);
 }
-
-.pieces-description {
-  display: none;
-}
-
-.photo-credit {
-  margin: 0.5em 0;
-  text-align: center;
-}

@@ -6,7 +6,7 @@ import { Fade } from 'react-reveal';
 
 class Bits extends Component {
   render() {
-    let pace = 250;
+    let pace = 200;
     let counter = 0;
     return (
       <div className="bits-content">
