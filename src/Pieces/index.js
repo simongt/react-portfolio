@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Fade } from 'react-reveal';
 import PieceSlider from "./PieceSlider";
-// import PieceGallery from "./PieceGallery";
-// import PieceCarousel from "./PieceCarousel";
+
 import "./style.css";
 
 class Pieces extends Component {
@@ -21,20 +20,20 @@ class Pieces extends Component {
         <div className="pieces">
             <Fade bottom distance="10em">
               <PieceSlider />
-              {/* <PieceGallery /> */}
-              {/* <PieceCarousel /> */}
             </Fade>
         </div>
 
 
-        <Fade top delay={500} distance="1em">
-          <footer className="photo-credit" style={{
-            margin: '0.5em 0',
-            textAlign: 'center'
-          }}>
-            &copy; Photography by Simon G. Tsegay
-          </footer>
-        </Fade>
+        <footer className="photo-credit" style={{
+          margin: '0.5em 0',
+          textAlign: 'center'
+        }}>
+          <Fade top delay={500} distance="1em">
+            <span>
+              &copy; Photography by Simon G. Tsegay
+            </span>
+          </Fade>
+        </footer>
       </div>
     );
   }

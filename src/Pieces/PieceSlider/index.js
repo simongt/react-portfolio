@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PieceCard from "../PieceCard";
+import { Fade } from 'react-reveal';
 import { data } from '../data';
 import "./style.css";
 
@@ -60,18 +61,22 @@ class PieceSlider extends Component {
 
   render() {
     // eslint-disable-next-line
-    const { photo, photos } = this.state;
+    const { photo } = this.state;
     return (
       <div className="image-slider">
         <div className="piece">
           <div className="next-prev-buttons">
-            <button className="prev-button" onClick={() => this.prevPhoto()}>
-              &lt;
-            </button>
+            <Fade right distance={`1em`} delay={750}>
+              <button className="prev-button" onClick={() => this.prevPhoto()}>
+                &lt;
+              </button>
+            </Fade>
             {/* disabled={photo.index === 0} */}
-            <button className="next-button" onClick={() => this.nextPhoto()}>
-              &gt;
-            </button>
+            <Fade left distance={`1em`} delay={750}>
+              <button className="next-button" onClick={() => this.nextPhoto()}>
+                &gt;
+              </button>
+            </Fade>
             {/* disabled={photo.index === photos.length - 1} */}
           </div>
           <PieceCard className="photo" photo={photo} />

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { 
   Route,
-  NavLink,
   HashRouter as Router,
   Switch
 } from "react-router-dom";
-import { Flip, Fade } from 'react-reveal';
 
 import Landing from "../Landing";
+import NavBar from "../NavBar";
+import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
@@ -17,53 +17,24 @@ import "./style.css";
 import "./responsive.css";
 
 class Main extends Component {
+  state = {
+    isLandingView: true
+  }
+
   render() {
+    const { isLandingView } = this.state;
     return (
       <Router>
         <div className="main">
-          <div className="menu-container">
-            <ul className="header-left">
-              <li>
-                {/* Home component is linked to top left image */}
-                <NavLink to="/home">
-                  <Flip left duration={1000} delay={3500}>
-                  {/* <Flip left duration={1000}> */}
-                    <img src="/img/sgt-logo.png" alt="SGT" />
-                  </Flip>
-                </NavLink>
-              </li>
-            </ul>
-            <ul className="header-right">
-              <li>
-                <NavLink to="/bits">
-                  <Fade top duration={1000} delay={3750}>
-                  {/* <Fade top duration={1000} delay={250}> */}
-                    <span>Bits</span>
-                  </Fade>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/pieces">
-                  <Fade top duration={1000} delay={4000}>
-                  {/* <Fade top duration={1000} delay={500}> */}
-                    <span>Pieces</span>
-                  </Fade>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/human">
-                  <Fade top duration={1000} delay={4250}>
-                  {/* <Fade top duration={1000} delay={750}> */}
-                    <span>Human</span>
-                  </Fade>
-                </NavLink>
-              </li>
-            </ul>
-          </div>
+          {/* if landing view, use slow reveal animations */}
+          {isLandingView ? <NavBarLanding /> : <NavBar />}          
           <div className="content">
             <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route path="/home" component={Home} />
+              {isLandingView ? (
+                <Route exact path="/" component={Landing} />
+              ) : (
+                <Route exact path="/" component={Home} />
+              )}
               <Route path="/bits" component={Bits} />
               <Route path="/pieces" component={Pieces} />
               <Route path="/human" component={Human} />
