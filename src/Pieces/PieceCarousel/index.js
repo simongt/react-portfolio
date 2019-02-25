@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
 import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
-
 import styled, { css } from 'styled-components';
+import { data } from '../data';
 
 const WIDTH = '300px', HEIGHT = '150px';
 
@@ -67,10 +66,39 @@ const CarouselUI = ({ position, total, handleClick, children }) => (
 const Carousel = makeCarousel(CarouselUI);
 
 export class PieceCarousel extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      photos: []
+    }
+  }
+
+  componentDidMount = () => {
+    if (data.photos) {
+      console.log(data.photos);
+      
+      this.setState({
+        photos: data.photos
+      })
+    }
+  }
+  
   render() {
+    const { photos } = this.state;
     return (
       <Carousel>
-        <Slide right>
+        {/* map over photos data */}
+        {photos.map(photo => (
+          <Slide right key={photo.index}>
+            <div>
+              <h1>{`${photo.title}`}</h1>
+              <p>{`${photo.description}`}</p>
+              {/* <img src={photo.imageURL} alt={photo.title}/> */}
+            </div>
+          </Slide>
+        ))}
+        {/* <Slide right>
           <div>
             <h1>Slide 1</h1>
             <p>Slide Description</p>
@@ -99,7 +127,7 @@ export class PieceCarousel extends Component {
             <h1>Slide 5</h1>
             <p>Slide Description</p>
           </div>
-        </Slide>
+        </Slide> */}
       </Carousel>
     )
   }

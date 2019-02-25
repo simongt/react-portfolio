@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Fade } from 'react-reveal';
-// import PieceCarousel from "./PieceCarousel";
 import PieceSlider from "./PieceSlider";
 // import PieceGallery from "./PieceGallery";
+// import PieceCarousel from "./PieceCarousel";
 import "./style.css";
 
 class Pieces extends Component {
@@ -20,9 +20,9 @@ class Pieces extends Component {
 
         <div className="pieces">
             <Fade bottom distance="10em">
-              {/* <PieceCarousel /> */}
               <PieceSlider />
               {/* <PieceGallery /> */}
+              {/* <PieceCarousel /> */}
             </Fade>
         </div>
 
