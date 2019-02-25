@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import { Flip, Fade } from 'react-reveal';
 import Typist from "react-typist";
 import "babel-polyfill";
-import { Flip, Fade } from 'react-reveal';
 import "./style.css";
 
-class Home extends Component {
+class Landing extends Component {
   render() {
     return (
       <div className="content js-content" data-page="home">
@@ -90,4 +90,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Landing;

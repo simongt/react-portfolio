@@ -6,8 +6,6 @@ import { Fade } from 'react-reveal';
 
 class Human extends Component {
   render() {
-    let pace = 250;
-    let counter = 0;
     return (
       <div className="human-wrapper">
         <Fade top distance="5em">
