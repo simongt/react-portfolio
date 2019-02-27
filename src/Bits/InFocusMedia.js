@@ -4,7 +4,7 @@ export class InFocusMedia extends Component {
   render() {
     return (
       <div className="project-item"> {/* Project Container */}
-        <h3>In Focus Media</h3>
+        <h3>In Focus Media (SmugMug)</h3>
         <div className="project-thumbnail">
           <a href="https://www.infocusmedia.us/"> {/* Live Link */}
             <img src="/img/bits/infocusmedia-us.gif" alt="In Focus Media" />

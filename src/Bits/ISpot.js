@@ -4,7 +4,7 @@ export class ISpot extends Component {
   render() {
     return (
       <div className="project-item"> {/* Project Container */}
-        <h3>iSpot</h3>
+        <h3>iSpot (Full-Stack)</h3>
         <div className="project-thumbnail">
           <a href="https://ispot-app.herokuapp.com/"> {/* Live Link */}
             <img src="/img/bits/ispot.gif" alt="iSpot" />

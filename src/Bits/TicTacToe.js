@@ -4,7 +4,7 @@ export class TicTacToe extends Component {
   render() {
     return (
       <div className="project-item"> {/* Project Container */}
-        <h3>Tic-Tac-Toe</h3>
+        <h3>Tic-Tac-Toe (jQuery)</h3>
         <div className="project-thumbnail">
           <a href="https://simongt.github.io/tic-tac-toe/"> {/* Live Link */}
             <img src="/img/bits/tic-tac-toe.gif" alt="Tic Tac Toe" />

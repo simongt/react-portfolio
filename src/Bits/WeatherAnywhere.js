@@ -4,7 +4,7 @@ export class WeatherAnywhere extends Component {
   render() {
     return (
       <div className="project-item"> {/* Project Container */}
-        <h3>Weather Anywhere</h3>
+        <h3>Weather Anywhere (Fetch API)</h3>
         <div className="project-thumbnail">
           <a href="https://simongt.github.io/weather-checker/"> {/* Live Link */}
             <img src="/img/bits/weather.gif" alt="Weather Anywhere" />

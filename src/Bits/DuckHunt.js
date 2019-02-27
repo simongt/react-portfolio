@@ -4,7 +4,7 @@ export class DuckHunt extends Component {
   render() {
     return (
       <div className="project-item"> {/* Project Container */}
-        <h3>Duck Hunt</h3>
+        <h3>Duck Hunt (VanillaJS)</h3>
         <div className="project-thumbnail">
           <a href="https://simongt.github.io/duck-hunt/"> {/* Live Link */}
             <img src="/img/bits/duck-hunt.gif" alt="Duck Hunt" />

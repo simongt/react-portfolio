@@ -2,29 +2,23 @@ import React, { Component } from "react";
 import "./style.css";
 // import "./responsive.css";
 
+import SimonGT from "./SimonGT";
 import Connect4 from "./Connect4";
+import NotPocket from "./NotPocket";
+import ListManagerReact from "./ListManagerReact";
+import TicTacToe from "./TicTacToe";
 import DuckHunt from "./DuckHunt";
 import InFocusMedia from "./InFocusMedia";
 import ISpot from "./ISpot";
-import ListManagerEJS from "./ListManagerEJS";
-import ListManagerReact from "./ListManagerReact";
-import NotPocket from "./NotPocket";
-import SimonGT from "./SimonGT";
-import TicTacToe from "./TicTacToe";
-import WeatherAnywhere from "./WeatherAnywhere";
+// import ListManagerEJS from "./ListManagerEJS";
+// import WeatherAnywhere from "./WeatherAnywhere";
 // import Bit from "./Bit";
 
 import { Fade } from 'react-reveal';
 
 class Bits extends Component {
-  componentDidMount = () => {
-  }
-  
   render() {
-    const { browser, updateILV } = this.props;
-    console.log(browser);
-    console.log(updateILV);
-    // updateILV(false);
+    const { browser } = this.props;
     let pace = 200;
     let counter = 0;
     return (
@@ -63,12 +57,6 @@ class Bits extends Component {
             <Fade bottom delay={pace * counter++} distance="10em">
               <ISpot />
             </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <ListManagerEJS />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <WeatherAnywhere />
-            </Fade>
           </div>
         ) : (
           <div style={{
@@ -85,8 +73,6 @@ class Bits extends Component {
             <DuckHunt />
             <InFocusMedia />
             <ISpot />
-            <ListManagerEJS />
-            <WeatherAnywhere />
           </div>
         )}
 
