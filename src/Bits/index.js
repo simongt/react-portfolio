@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./style.css";
 // import "./responsive.css";
 
-import Bit from "./Bit";
 import Connect4 from "./Connect4";
 import DuckHunt from "./DuckHunt";
 import InFocusMedia from "./InFocusMedia";
@@ -13,6 +12,7 @@ import NotPocket from "./NotPocket";
 import SimonGT from "./SimonGT";
 import TicTacToe from "./TicTacToe";
 import WeatherAnywhere from "./WeatherAnywhere";
+// import Bit from "./Bit";
 
 import { Fade } from 'react-reveal';
 
