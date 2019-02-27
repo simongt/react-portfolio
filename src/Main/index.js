@@ -4,6 +4,7 @@ import {
   HashRouter as Router,
   Switch
 } from "react-router-dom";
+import is from "is_js";
 
 import Landing from "../Landing";
 import NavBar from "../NavBar";
@@ -18,11 +19,41 @@ import "./responsive.css";
 
 class Main extends Component {
   state = {
-    isLandingView: true
+    isLandingView: true,
+    browser: {
+      isOpera: false,
+      isFirefox: false,
+      isSafari: false,
+      isIE: false,
+      isEdge: false,
+      isChrome: false,
+      isOther: false
+    },
+  }
+
+  updateILV = (isLandingView) => {
+    this.setState({
+      isLandingView: isLandingView
+    })
+  }
+
+  componentDidMount = (props) => {
+    this.setState({
+      isLandingView: this.props.isLandingView,
+      browser: {
+        isOpera: is.opera(),
+        isFirefox: is.firefox(),
+        isSafari: is.safari(),
+        isIE: is.ie(),
+        isEdge: is.edge(),
+        isChrome: is.chrome(),
+        isOther: !(is.opera() || is.firefox() || is.safari() || is.ie() || is.edge() || is.chrome())
+      }
+    });
   }
 
   render() {
-    const { isLandingView } = this.state;
+    const { isLandingView, browser } = this.state;
     return (
       <Router>
         <div className="main">
@@ -31,14 +62,32 @@ class Main extends Component {
           <div className="content">
             <Switch>
               {isLandingView ? (
-                <Route exact path="/" component={Landing} />
+                <Route 
+                  exact path="/" 
+                  component={() => <Landing browser={browser} isLandingView={true} />} 
+                />
               ) : (
-                <Route exact path="/" component={Home} />
+                <Route 
+                  exact path="/" 
+                  component={() => <Home browser={browser} isLandingView={false} />} 
+                />
               )}
-              <Route path="/bits" component={Bits} />
-              <Route path="/pieces" component={Pieces} />
-              <Route path="/human" component={Human} />
-              <Route path="*" component={Landing} />
+              <Route 
+                path="/bits" 
+                component={() => <Bits browser={browser} isLandingView={false} />}
+              />
+              <Route 
+                path="/pieces" 
+                component={() => <Pieces browser={browser} isLandingView={false} />}
+              />
+              <Route 
+                path="/human" 
+                component={() => <Human browser={browser} isLandingView={false} />}
+              />
+              <Route 
+                path="*" 
+                component={() => <Landing browser={browser} isLandingView={false} />}
+              />
             </Switch>
           </div>
         </div>
