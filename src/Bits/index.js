@@ -17,8 +17,14 @@ import WeatherAnywhere from "./WeatherAnywhere";
 import { Fade } from 'react-reveal';
 
 class Bits extends Component {
+  componentDidMount = () => {
+  }
+  
   render() {
-    const { browser } = this.props;
+    const { browser, updateILV } = this.props;
+    console.log(browser);
+    console.log(updateILV);
+    // updateILV(false);
     let pace = 200;
     let counter = 0;
     return (

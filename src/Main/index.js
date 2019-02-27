@@ -64,29 +64,29 @@ class Main extends Component {
               {isLandingView ? (
                 <Route 
                   exact path="/" 
-                  component={() => <Landing browser={browser} isLandingView={true} />} 
+                  component={() => <Landing browser={browser} />} 
                 />
               ) : (
                 <Route 
                   exact path="/" 
-                  component={() => <Home browser={browser} isLandingView={false} />} 
+                  component={() => <Home browser={browser} />} 
                 />
               )}
               <Route 
                 path="/bits" 
-                component={() => <Bits browser={browser} isLandingView={false} />}
+                component={() => <Bits browser={browser} updateILV={this.updateILV} />}
               />
               <Route 
                 path="/pieces" 
-                component={() => <Pieces browser={browser} isLandingView={false} />}
+                component={() => <Pieces browser={browser} updateILV={this.updateILV} />}
               />
               <Route 
                 path="/human" 
-                component={() => <Human browser={browser} isLandingView={false} />}
+                component={() => <Human browser={browser} updateILV={this.updateILV} />}
               />
               <Route 
                 path="*" 
-                component={() => <Landing browser={browser} isLandingView={false} />}
+                component={() => <Landing browser={browser} updateILV={this.updateILV} />}
               />
             </Switch>
           </div>

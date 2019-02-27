@@ -205,9 +205,10 @@ ul.header-right li a {
 }
 
 ul.header-right li a:hover {
-  background-color: transparent;
-  color: #fc0;
-  border: 1px solid #fc0;
+  /* background-color: transparent; */
+  /* color: #fc0; */
+  text-decoration: overline;
+  border: 1px solid #f0f0f0;
 }
 
 .content {
