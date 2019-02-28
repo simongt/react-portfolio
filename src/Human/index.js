@@ -7,18 +7,18 @@ import { Fade } from 'react-reveal';
 class Human extends Component {
   
   constructor(props) {
-    console.log('Human --> constructor');
     super(props);
+    console.log('Human --> constructor');
   }
 
   componentDidMount = () => {
-    console.log('Human --> componentDidMount');
+    console.log('Human --> componentDidMount: ' + this.props.path);
     console.log('--{ Human render cycle complete }--');
     console.log('');
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('Human --> componentDidUpdate');
+    console.log('Human --> componentDidUpdate: ' + this.props.path);
     console.log('--{ Human render cycle complete }--');
     console.log('');
   }

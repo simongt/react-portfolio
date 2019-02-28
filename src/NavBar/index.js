@@ -2,7 +2,26 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 export class NavBar extends Component {
+
+  constructor(props) {
+    super(props);
+    console.log('NavBar --> constructor');
+  }
+
+  componentDidMount = () => {
+    console.log('NavBar --> componentDidMount');
+    console.log('--{ NavBar render cycle complete }--');
+    console.log('');
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('NavBar --> componentDidUpdate');
+    console.log('--{ NavBar render cycle complete }--');
+    console.log('');
+  }
+
   render() {
+    console.log('NavBar --> render');
     return (
       <div className="menu-container">
         <ul className="header-left">

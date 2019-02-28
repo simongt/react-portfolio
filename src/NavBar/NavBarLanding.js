@@ -3,7 +3,26 @@ import { NavLink } from "react-router-dom";
 import { Flip, Fade } from 'react-reveal';
 
 export class NavBarLanding extends Component {
+
+  constructor(props) {
+    super(props);
+    console.log('NavBarLanding --> constructor');
+  }
+
+  componentDidMount = () => {
+    console.log('NavBarLanding --> componentDidMount');
+    console.log('--{ NavBarLanding render cycle complete }--');
+    console.log('');
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('NavBarLanding --> componentDidUpdate');
+    console.log('--{ NavBarLanding render cycle complete }--');
+    console.log('');
+  }
+
   render() {
+    console.log('NavBarLanding --> render');
     return (
       <div className="menu-container">
         <ul className="header-left">

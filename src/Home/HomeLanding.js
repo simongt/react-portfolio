@@ -4,27 +4,27 @@ import Typist from "react-typist";
 import "babel-polyfill";
 import "./style.css";
 
-class Landing extends Component {
+class HomeLanding extends Component {
 
   constructor(props) {
-    console.log('Landing --> constructor');
     super(props);
+    console.log('HomeLanding --> constructor');
   }
 
   componentDidMount = () => {
-    console.log('Landing --> componentDidMount');
-    console.log('--{ Landing render cycle complete }--');
+    console.log('HomeLanding --> componentDidMount: ' + this.props.path);
+    console.log('--{ HomeLanding render cycle complete }--');
     console.log('');
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('Landing --> componentDidUpdate');
-    console.log('--{ Landing render cycle complete }--');
+    console.log('HomeLanding --> componentDidUpdate: ' + this.props.path);
+    console.log('--{ HomeLanding render cycle complete }--');
     console.log('');
   }
 
   render() {
-    console.log('Landing --> render');
+    console.log('HomeLanding --> render');
     return (
       <div className="content js-content" data-page="home">
         <header className="hero">
@@ -109,4 +109,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default HomeLanding;

@@ -7,18 +7,18 @@ import "./style.css";
 class Pieces extends Component {
 
   constructor(props) {
-    console.log('Pieces --> constructor');
     super(props);
+    console.log('Pieces --> constructor');
   }
 
   componentDidMount = () => {
-    console.log('Pieces --> componentDidMount');
+    console.log('Pieces --> componentDidMount: ' + this.props.path);
     console.log('--{ Pieces render cycle complete }--');
     console.log('');
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('Pieces --> componentDidUpdate');
+    console.log('Pieces --> componentDidUpdate: ' + this.props.path);
     console.log('--{ Pieces render cycle complete }--');
     console.log('');
   }

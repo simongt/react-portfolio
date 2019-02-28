@@ -7,19 +7,18 @@ import "./style.css";
 class Home extends Component {
 
   constructor(props) {
-    console.log('Home --> constructor');
     super(props);
+    console.log('Home --> constructor');
   }
 
-
   componentDidMount = () => {
-    console.log('Home --> componentDidMount');
+    console.log('Home --> componentDidMount: ' + this.props.path);
     console.log('--{ Home render cycle complete }--');
     console.log('');
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('Home --> componentDidUpdate');
+    console.log('Home --> componentDidUpdate: ' + this.props.path);
     console.log('--{ Home render cycle complete }--');
     console.log('');
   }

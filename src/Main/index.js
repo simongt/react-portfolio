@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import Landing from "../Landing";
-import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
+// import HomeLanding from "../HomeLanding";
+import NavBar from "../NavBar";
 import Home from "../Home";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
@@ -20,9 +20,8 @@ import "./responsive.css";
 class Main extends Component {
 
   constructor(props) {
-    console.log('Main --> constructor');
-
     super(props);
+    console.log('Main --> constructor');
   
     this.state = {
       browser: {
@@ -37,7 +36,7 @@ class Main extends Component {
     }
   }
   
-  componentDidMount = (props) => {
+  componentDidMount = () => {
     console.log('Main --> componentDidMount');
     console.log('--{ Main render cycle complete }--');
     console.log('');
@@ -63,7 +62,6 @@ class Main extends Component {
 
   render() {
     console.log('Main --> render');
-    
     const { browser } = this.state;
     return (
       <Router>
@@ -74,31 +72,46 @@ class Main extends Component {
               <Route 
                 exact path="/"
                 component={() => (
-                  <Home browser={browser} />
+                  <Home 
+                    browser={browser} 
+                    path="/" 
+                  />
                 )}
               />
               <Route 
                 path="/bits"
                 component={() => (
-                  <Bits browser={browser} />
+                  <Bits 
+                    browser={browser} 
+                    path="/bits" 
+                  />
                 )}
               />
               <Route 
                 path="/pieces"
                 component={() => (
-                  <Pieces browser={browser} />
+                  <Pieces 
+                    browser={browser} 
+                    path="/pieces" 
+                  />
                 )}
               />
               <Route 
                 path="/human"
                 component={() => (
-                  <Human browser={browser} />
+                  <Human 
+                    browser={browser} 
+                    path="/human" 
+                  />
                 )}
               />
               <Route 
                 path="*"
                 component={() => (
-                  <Landing browser={browser} />
+                  <Home 
+                    browser={browser} 
+                    path="/" 
+                  />
                 )}
               />
             </Switch>
