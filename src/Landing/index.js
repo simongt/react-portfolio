@@ -5,7 +5,26 @@ import "babel-polyfill";
 import "./style.css";
 
 class Landing extends Component {
+
+  constructor(props) {
+    console.log('Landing --> constructor');
+    super(props);
+  }
+
+  componentDidMount = () => {
+    console.log('Landing --> componentDidMount');
+    console.log('--{ Landing render cycle complete }--');
+    console.log('');
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('Landing --> componentDidUpdate');
+    console.log('--{ Landing render cycle complete }--');
+    console.log('');
+  }
+
   render() {
+    console.log('Landing --> render');
     return (
       <div className="content js-content" data-page="home">
         <header className="hero">

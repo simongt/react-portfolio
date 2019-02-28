@@ -17,6 +17,24 @@ import ISpot from "./ISpot";
 import { Fade } from 'react-reveal';
 
 class Bits extends Component {
+
+  constructor(props) {
+    console.log('Bits --> constructor');
+    super(props);
+  }
+
+  componentDidMount = () => {
+    console.log('Bits --> componentDidMount');
+    console.log('--{ Bits render cycle complete }--');
+    console.log('');
+  }
+  
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('Bits --> componentDidUpdate');
+    console.log('--{ Bits render cycle complete }--');
+    console.log('');    
+  }
+
   render() {
     const { browser } = this.props;
     let pace = 200;

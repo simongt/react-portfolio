@@ -5,7 +5,26 @@ import "./responsive.css";
 import { Fade } from 'react-reveal';
 
 class Human extends Component {
+  
+  constructor(props) {
+    console.log('Human --> constructor');
+    super(props);
+  }
+
+  componentDidMount = () => {
+    console.log('Human --> componentDidMount');
+    console.log('--{ Human render cycle complete }--');
+    console.log('');
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('Human --> componentDidUpdate');
+    console.log('--{ Human render cycle complete }--');
+    console.log('');
+  }
+
   render() {
+    console.log('Human --> render');
     return (
       <div className="human-wrapper">
         <Fade top distance="5em">

@@ -1,11 +1,32 @@
 import React, { Component } from "react";
+import { Flip, Fade } from 'react-reveal';
 import Typist from "react-typist";
 import "babel-polyfill";
-import { Flip, Fade } from 'react-reveal';
 import "./style.css";
 
 class Home extends Component {
+
+  constructor(props) {
+    console.log('Home --> constructor');
+    super(props);
+  }
+
+
+  componentDidMount = () => {
+    console.log('Home --> componentDidMount');
+    console.log('--{ Home render cycle complete }--');
+    console.log('');
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('Home --> componentDidUpdate');
+    console.log('--{ Home render cycle complete }--');
+    console.log('');
+  }
+
   render() {
+    console.log('Home --> render');
+
     return (
       <div className="content js-content" data-page="home">
         <header className="hero">
@@ -25,7 +46,7 @@ class Home extends Component {
                   <span>
                     a <strong className="emphasize">web developer</strong>
                   </span>
-                  <Typist.Backspace count={15} delay={5000} />
+                  <Typist.Backspace count={15} delay={3000} />
                   <span>
                     a <strong className="emphasize">photographer</strong>
                   </span>
@@ -49,9 +70,8 @@ class Home extends Component {
                 </span>
               </Fade>
             </h1>
-
-            <Flip left cascade delay={250}>
-              <ul className="home-fa">
+            <ul className="home-fa">
+              <Flip left delay={300}>
                 <li>
                   <a
                     href="https://linkedin.com/in/simongt"
@@ -61,6 +81,8 @@ class Home extends Component {
                     <i className="fab fa-linkedin" />
                   </a>
                 </li>
+              </Flip>
+              <Flip left delay={450}>
                 <li>
                   <a
                     href="https://github.com/simongt"
@@ -70,13 +92,15 @@ class Home extends Component {
                     <i className="fab fa-github" />
                   </a>
                 </li>
+              </Flip>
+              <Flip left delay={600}>
                 <li>
                   <a href="mailto:simon@simongt.net?subject=Visitor from SimonGT.net&body=Hi Simon!">
                     <i className="fas fa-envelope" />
                   </a>
                 </li>
-              </ul>
-            </Flip>
+              </Flip>
+            </ul>
           </div>
         </header>
       </div>

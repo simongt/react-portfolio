@@ -8,7 +8,7 @@ import is from "is_js";
 
 import Landing from "../Landing";
 import NavBar from "../NavBar";
-import NavBarLanding from "../NavBarLanding";
+// import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
@@ -18,28 +18,31 @@ import "./style.css";
 import "./responsive.css";
 
 class Main extends Component {
-  state = {
-    isLandingView: true,
-    browser: {
-      isOpera: false,
-      isFirefox: false,
-      isSafari: false,
-      isIE: false,
-      isEdge: false,
-      isChrome: false,
-      isOther: false
-    },
-  }
 
-  updateILV = (isLandingView) => {
-    this.setState({
-      isLandingView: isLandingView
-    })
-  }
+  constructor(props) {
+    console.log('Main --> constructor');
 
+    super(props);
+  
+    this.state = {
+      browser: {
+        isOpera: false,
+        isFirefox: false,
+        isSafari: false,
+        isIE: false,
+        isEdge: false,
+        isChrome: false,
+        isOther: false
+      },
+    }
+  }
+  
   componentDidMount = (props) => {
+    console.log('Main --> componentDidMount');
+    console.log('--{ Main render cycle complete }--');
+    console.log('');
+    
     this.setState({
-      isLandingView: this.props.isLandingView,
       browser: {
         isOpera: is.opera(),
         isFirefox: is.firefox(),
@@ -52,41 +55,51 @@ class Main extends Component {
     });
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log('Main --> componentDidUpdate');
+    console.log('--{ Main render cycle complete }--');
+    console.log('');
+  }
+
   render() {
-    const { isLandingView, browser } = this.state;
+    console.log('Main --> render');
+    
+    const { browser } = this.state;
     return (
       <Router>
         <div className="main">
-          {/* if landing view, use slow reveal animations */}
-          {isLandingView ? <NavBarLanding /> : <NavBar />}          
+          <NavBar />
           <div className="content">
             <Switch>
-              {isLandingView ? (
-                <Route 
-                  exact path="/" 
-                  component={() => <Landing browser={browser} />} 
-                />
-              ) : (
-                <Route 
-                  exact path="/" 
-                  component={() => <Home browser={browser} />} 
-                />
-              )}
               <Route 
-                path="/bits" 
-                component={() => <Bits browser={browser} updateILV={this.updateILV} />}
+                exact path="/"
+                component={() => (
+                  <Home browser={browser} />
+                )}
               />
               <Route 
-                path="/pieces" 
-                component={() => <Pieces browser={browser} updateILV={this.updateILV} />}
+                path="/bits"
+                component={() => (
+                  <Bits browser={browser} />
+                )}
               />
               <Route 
-                path="/human" 
-                component={() => <Human browser={browser} updateILV={this.updateILV} />}
+                path="/pieces"
+                component={() => (
+                  <Pieces browser={browser} />
+                )}
               />
               <Route 
-                path="*" 
-                component={() => <Landing browser={browser} updateILV={this.updateILV} />}
+                path="/human"
+                component={() => (
+                  <Human browser={browser} />
+                )}
+              />
+              <Route 
+                path="*"
+                component={() => (
+                  <Landing browser={browser} />
+                )}
               />
             </Switch>
           </div>
