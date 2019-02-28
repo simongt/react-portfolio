@@ -60,11 +60,6 @@ ul.home-fa i.fa-envelope {
   margin: 0 0 0 calc(100vmin/66);
 }
 
-ul.header-right li a.active {
-  background-color: rgba(255, 255, 255, .9);
-  color: #000;
-}
-
 img {
   max-width: calc(100vw - 50px);
   max-height: calc(100vh - 150px);
