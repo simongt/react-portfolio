@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { Flip, Fade } from 'react-reveal';
+import "./style.css";
 
 export class NavBarLanding extends Component {
 

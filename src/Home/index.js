@@ -3,6 +3,7 @@ import { Flip, Fade } from 'react-reveal';
 import Typist from "react-typist";
 import "babel-polyfill";
 import "./style.css";
+import { NavLink } from 'react-router-dom';
 
 class Home extends Component {
 
@@ -38,24 +39,28 @@ class Home extends Component {
                 <span>Hello.</span>
                 <br />
                 <span>
-                  I'm <strong className="emphasize">Simon</strong>,
+                  I'm <strong className="emphasize"><a href="https://linkedin.com/in/simongt" target="_blank" rel="noopener noreferrer">Simon</a></strong>,
                 </span>
                 <br />
                 <Typist>
                   <span>
-                    a <strong className="emphasize">web developer</strong>
+                    a <strong className="emphasize"><NavLink to="/bits">web developer</NavLink></strong>
                   </span>
                   <Typist.Backspace count={15} delay={3000} />
                   <span>
-                    a <strong className="emphasize">photographer</strong>
+                    a <strong className="emphasize"><NavLink to="/pieces">photographer</NavLink></strong>
                   </span>
                   <Typist.Backspace count={14} delay={2000} />
                   <span>
-                    an <strong className="emphasize">instructor</strong>
+                    an <strong className="emphasize"><a href="https://generalassemb.ly/instructors/simon-tsegay/18377" target="_blank" rel="noopener noreferrer">instructor</a></strong>
+                  </span>
+                  <Typist.Backspace count={15} delay={3000} />
+                  <span>
+                    a <strong className="emphasize"><NavLink to="/human">human being</NavLink></strong>
                   </span>
                   <Typist.Backspace count={13} delay={2000} />
                   <span>
-                    a <strong className="emphasize">web developer</strong>
+                    a <strong className="emphasize"><NavLink to="/bits">web developer</NavLink></strong>
                   </span>
                 </Typist>
                 <span>

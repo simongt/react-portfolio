@@ -31,8 +31,7 @@ time, mark, audio, video {
 }
 
 html,
-body {  
-  /* background-color: rgba(105, 0, 234, 1); */
+body {
   background-color: rgba(0, 0, 0, 0.85);
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -88,27 +87,29 @@ p, footer {
 
 img {
   text-align: center;
+  max-width: calc(100vw - 50px);
+  max-height: calc(100vh - 150px);
 }
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 a:link {
-  color: #fc0;
+  color: rgba(255, 232, 140, 1);
 }
 
 a:visited {
-  color: cyan;
+  color: rgba(255, 232, 140, 1);
 }
 
 a:hover {
-  color: white;
+  color: rgba(213, 183, 255, 1);
 }
 
 a:active {
-  color: hotpink;
+  color: rgba(255, 255, 255, 1);
 }
 
 .content {
