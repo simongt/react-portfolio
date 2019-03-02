@@ -105,11 +105,11 @@ a:visited {
 }
 
 a:hover {
-  color: rgba(213, 183, 255, 1);
+  color: rgba(255, 204, 0, 1);
 }
 
 a:active {
-  color: rgba(255, 255, 255, 1);
+  color: hotpink;
 }
 
 .content {

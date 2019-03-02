@@ -4,6 +4,7 @@ import "./style.css";
 
 import { projects } from './seed';
 import Bit from "./Bit";
+// import SimonGT from "./SimonGT";
 
 import { Fade } from 'react-reveal';
 
@@ -43,7 +44,7 @@ class Bits extends Component {
           justifyContent: 'center',
           width: 'calc(100vw - 1em)'
         }}>
-
+          {/* <div><SimonGT/></div> */}
           {/* only use react-reveal effects for Chrome & Firefox */}
           {browser.isChrome || browser.isFirefox ? (
             projects.map(project => {

@@ -37,11 +37,10 @@ class Pieces extends Component {
         </p>
 
         <div className="pieces">
-            <Fade bottom distance="10em">
-              <PieceSlider />
-            </Fade>
+          <Fade bottom distance="10em">
+            <PieceSlider />
+          </Fade>
         </div>
-
 
         <footer className="photo-credit" style={{
           margin: '0.5em 0',
