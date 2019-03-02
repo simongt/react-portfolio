@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImageGallery from 'react-image-gallery';
 import uuid from 'uuid';
-import { data } from '../data';
+import { data } from '../seed';
 import './style.css';
 
 const PREFIX_URL = 'https://simongt.net/img/pieces/';

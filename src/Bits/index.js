@@ -2,17 +2,8 @@ import React, { Component } from "react";
 import "./style.css";
 // import "./responsive.css";
 
-import SimonGT from "./SimonGT";
-import Connect4 from "./Connect4";
-import NotPocket from "./NotPocket";
-import ListManagerReact from "./ListManagerReact";
-import TicTacToe from "./TicTacToe";
-import DuckHunt from "./DuckHunt";
-import InFocusMedia from "./InFocusMedia";
-import ISpot from "./ISpot";
-// import ListManagerEJS from "./ListManagerEJS";
-// import WeatherAnywhere from "./WeatherAnywhere";
-// import Bit from "./Bit";
+import { projects } from './seed';
+import Bit from "./Bit";
 
 import { Fade } from 'react-reveal';
 
@@ -39,13 +30,14 @@ class Bits extends Component {
     console.log('Bits --> render');
     
     const { browser } = this.props;
-    let pace = 200;
-    let counter = 0;
+    let pace = 200, counter = 0;
     return (
       <div style={{
         display: 'grid',
         justifyContent: 'center center',
       }}> {/* className='projects-container' */}
+
+        {/* only use react-reveal effects for Chrome & Firefox */}
         {browser.isChrome || browser.isFirefox ? (
           <div style={{
             display: 'flex',
@@ -53,30 +45,18 @@ class Bits extends Component {
             justifyContent: 'center',
             width: 'calc(100vw - 1em)'
           }}>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <SimonGT />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <Connect4 />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <NotPocket />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <ListManagerReact />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <TicTacToe />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <DuckHunt />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <InFocusMedia />
-            </Fade>
-            <Fade bottom delay={pace * counter++} distance="10em">
-              <ISpot />
-            </Fade>
+            {projects.map(project => {
+              return (
+                <Fade
+                  key={project.id}
+                  bottom 
+                  delay={pace * counter++} 
+                  distance="10em"
+                >
+                  <Bit key={project.id} project={project} />
+                </Fade>
+              );
+            })}
           </div>
         ) : (
           <div style={{
@@ -85,14 +65,15 @@ class Bits extends Component {
             justifyContent: 'center',
             width: 'calc(100vw - 1em)'
           }}>
-            <SimonGT />
-            <Connect4 />
-            <NotPocket />
-            <ListManagerReact />
-            <TicTacToe />
-            <DuckHunt />
-            <InFocusMedia />
-            <ISpot />
+            {projects.map(project => {
+              return (
+                !project.hidden && (
+                  <div key={project.id}>
+                    <Bit project={project} />
+                  </div>
+                )
+              );
+            })}
           </div>
         )}
 

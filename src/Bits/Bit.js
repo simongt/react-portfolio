@@ -1,26 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class Bit extends Component {
   render() {
+    const {
+      title,
+      description,
+      github,
+      live,
+      // imgUrl,
+      gifUrl
+    } = this.props.project;
     return (
-      <div className="project-item" style={{ visibility: 'hidden' }}> {/* Project Container */}
-        <h3> {/* Project Title */} </h3>
+      <div className="project-item"> {/* Project Container */}
+        <h3>{title}</h3> {/* Project Title */}
         <div className="project-thumbnail">
-          <a href="https://simongt.net"> {/* Live Link */}
-            <img
-              className="project-placeholder"
-              src="/img/sgt-logo.png"
-              alt="Thumbnail of project."
-            />
+          <a href={live}> {/* Live Link */}
+            <img src={gifUrl} alt={title} />
           </a>
         </div>
-        <p /> {/* Project Description */}
+        <p>{description}</p> {/* Project Description */}
         <ul className="icon-links">
           <li> {/* Repo Link */}
-            <a href="https://github.com/simongt">GitHub</a>
+            <a href={github}>GITHUB</a>
           </li>
           <li> {/* Live Link */}
-            <a href="https://simongt.net">Live</a>
+            <a href={live}>LIVE</a>
           </li>
         </ul>
       </div>
@@ -28,4 +32,4 @@ export class Bit extends Component {
   }
 }
 
-export default Bit
+export default Bit;

@@ -10,17 +10,24 @@ export class SimonGT extends Component {
             <img src="/img/bits/portfolio.gif" alt="simongt.net" />
           </a>
         </div>
-        <p> {/* Project Description */}
-          Used CSS Grid + FlexBox, JavaScript and React to create a responsive portfolio website that alternates page views using React Router.
-        </p>
-        <ul className="icon-links">
-          <li> {/* Repo Link */}
-            <a href="https://github.com/simongt/react-portfolio">GitHub</a>
-          </li>
-          <li> {/* Live Link */}
-            <a href="https://simongt.net">Live</a>
-          </li>
-        </ul>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center'
+        }}>
+          <p> {/* Project Description */}
+            Used React, JavaScript, CSS Grid + FlexBox to create a responsive portfolio website that alternates page views using React Router.
+          </p>
+          <a href="https://github.com/simongt/react-portfolio">
+            <i 
+              className="fab fa-github" 
+              style={{
+                fontSize: '3em',
+                marginLeft: '0.5em',
+                color: '#fc0'
+              }}
+            />
+          </a>
+        </div>
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
 import styled, { css } from 'styled-components';
-import { data } from '../data';
+import { data } from '../seed';
 
 const WIDTH = '300px', HEIGHT = '150px';
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class ListManager1 extends Component {
+export class ListManagerReact extends Component {
   render() {
     return (
       <div className="project-item"> {/* Project Container */}
@@ -31,4 +31,4 @@ export class ListManager1 extends Component {
   }
 }
 
-export default ListManager1
+export default ListManagerReact

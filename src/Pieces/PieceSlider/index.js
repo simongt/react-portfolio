@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PieceCard from "../PieceCard";
 import { Fade } from 'react-reveal';
-import { data } from '../data';
+import { data } from '../seed';
 import "./style.css";
 
 class PieceSlider extends Component {
