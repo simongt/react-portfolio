@@ -67,11 +67,58 @@ export const projects = [{
   id: uuid.v4(),
   title: "iSpot (Full-Stack)",
   gifUrl: '/img/bits/ispot.gif',
-    imgUrl: '/img/bits/ispot.jpg',
+  imgUrl: '/img/bits/ispot.jpg',
   description: "Used EJS, Node, Express and Postgres to create iSpot, a content-aggregation and discovery platform that lets users manage collections of saved locations.",
   live: 'https://ispot-app.herokuapp.com/',
   github: 'https://github.com/simongt/ispot',
   hidden: false,
+}, {
+  id: uuid.v4(),
+  title: "Task List (EJS)",
+  gifUrl: '/img/bits/to-do-ejs.gif',
+  imgUrl: '/img/bits/to-do-ejs.jpg',
+  description: "Used EJS, Node, Express and Postgres to create Task List, a full CRUD app that organizes to-do items.",
+  live: 'https://simongt.github.io/ejs-to-do-list/',
+  github: 'https://github.com/simongt/ejs-to-do-list/',
+  hidden: true,
+}, {
+  id: uuid.v4(),
+  title: "Weather Anywhere (Fetch API)",
+  gifUrl: '/img/bits/weather.gif',
+  imgUrl: '/img/bits/weather.jpg',
+  description: "Used HTML, CSS, JavaScript (with jQuery) and the OpenWeatherMap API to create Weather Anywhere.",
+  live: 'https://simongt.github.io/weather-checker/',
+  github: 'https://github.com/simongt/weather-checker',
+  hidden: true,
+}, {
+  id: uuid.v4(),
+  title: "",
+  gifUrl: '/img/bits/.gif',
+  imgUrl: '/img/bits/.jpg',
+  description: "",
+  live: 'https://',
+  github: 'https://github.com/simongt/',
+  hidden: true,
+}, {
+  id: uuid.v4(),
+  title: "",
+  gifUrl: '/img/bits/.gif',
+  imgUrl: '/img/bits/.jpg',
+  description: "",
+  live: 'https://',
+  github: 'https://github.com/simongt/',
+  hidden: true,
+}, {
+  id: uuid.v4(),
+  title: "",
+  gifUrl: '/img/bits/.gif',
+  imgUrl: '/img/bits/.jpg',
+  description: "",
+  live: 'https://',
+  github: 'https://github.com/simongt/',
+  hidden: true,
 }];
 
-export default { projects };
+export default {
+  projects
+};

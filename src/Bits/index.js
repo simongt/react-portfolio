@@ -37,16 +37,17 @@ class Bits extends Component {
         justifyContent: 'center center',
       }}> {/* className='projects-container' */}
 
-        {/* only use react-reveal effects for Chrome & Firefox */}
-        {browser.isChrome || browser.isFirefox ? (
-          <div style={{
-            display: 'flex',
-            flexFlow: 'row wrap',
-            justifyContent: 'center',
-            width: 'calc(100vw - 1em)'
-          }}>
-            {projects.map(project => {
-              return (
+        <div style={{
+          display: 'flex',
+          flexFlow: 'row wrap',
+          justifyContent: 'center',
+          width: 'calc(100vw - 1em)'
+        }}>
+
+          {/* only use react-reveal effects for Chrome & Firefox */}
+          {browser.isChrome || browser.isFirefox ? (
+            projects.map(project => {
+              return (!project.hidden && (
                 <Fade
                   key={project.id}
                   bottom 
@@ -55,27 +56,19 @@ class Bits extends Component {
                 >
                   <Bit key={project.id} project={project} />
                 </Fade>
-              );
-            })}
-          </div>
-        ) : (
-          <div style={{
-            display: 'flex',
-            flexFlow: 'row wrap',
-            justifyContent: 'center',
-            width: 'calc(100vw - 1em)'
-          }}>
-            {projects.map(project => {
-              return (
-                !project.hidden && (
-                  <div key={project.id}>
-                    <Bit project={project} />
-                  </div>
-                )
-              );
-            })}
-          </div>
-        )}
+              ));
+            })
+          ) : (
+            projects.map(project => {
+              return (!project.hidden && (
+                <div key={project.id}>
+                  <Bit project={project} />
+                </div>
+              ));
+            })
+          )}
+          
+        </div>
 
       </div>
     );
