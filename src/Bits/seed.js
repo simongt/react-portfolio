@@ -59,7 +59,7 @@ export const projects = [{
   title: "In Focus Media (SmugMug)",
   gifUrl: '/img/bits/infocusmedia-us.gif',
   imgUrl: '/img/bits/infocusmedia-us.jpg',
-  description: "Used HTML, CSS and SmugMug's CMS to build a customized web platform for a creative media business that specializes in photography.",
+  description: "Used HTML, CSS, Adobe Creative Suite and SmugMug's CMS to build a customized web platform for a creative media business that specializes in photography, videography, web and graphic design.",
   live: 'https://www.infocusmedia.us/',
   github: '',
   hidden: false,
