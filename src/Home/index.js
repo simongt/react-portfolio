@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { NavLink } from 'react-router-dom';
 import { Flip, Fade } from 'react-reveal';
 import Typist from "react-typist";
 import "babel-polyfill";
+
 import "./style.css";
-import { NavLink } from 'react-router-dom';
 
 class Home extends Component {
 
@@ -82,7 +83,13 @@ class Home extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-linkedin" />
+                    <i 
+                      className="fab fa-linkedin" 
+                      style={{
+                        fontSize: 'calc(100vmin/12)',
+                        margin: '0 calc(100vmin/66) 0 0',
+                      }}
+                    />
                   </a>
                 </li>
               </Flip>
@@ -93,14 +100,25 @@ class Home extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-github" />
+                    <i 
+                      className="fab fa-github" 
+                      style={{
+                        fontSize: 'calc(100vmin/12)',
+                      }}
+                    />
                   </a>
                 </li>
               </Flip>
               <Flip left delay={600}>
                 <li>
                   <a href="mailto:simon@simongt.net?subject=Visitor from SimonGT.net&body=Hi Simon!">
-                    <i className="fas fa-envelope" />
+                    <i 
+                      className="fas fa-envelope" 
+                      style={{
+                        fontSize: 'calc(100vmin/12)',
+                        margin: '0 0 0 calc(100vmin/66)',
+                      }}
+                    />
                   </a>
                 </li>
               </Flip>

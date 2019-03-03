@@ -2,40 +2,13 @@ html, body {
   overflow-x: hidden;
 }
 
-.bits-content {
-  display: grid;
-  place-items: center center;
-  min-height: calc(100vh - 100px);
-  padding: calc(100vmax/50);
-}
-
-.projects-container {
-  margin: 0 10px 0 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.projects-container h3,
-.project-item h3 {
-  text-align: center;
-}
-
-.projects-container p,
-.project-item p {
-  text-align: justify;
-}
-
-.project-item {
+div.project-item {
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
-  width: 28.5em;
-  /* min-width: 28.5em; */
-  /* max-width: 38em; */
-  min-height: 27em;
-  max-height: 27em;
+  min-width: 28.5em;
+  max-width: 28.5em;
+  max-height: 24.5em;
+  min-height: 24.5em;
   padding: 0.5em;
   margin: 0.5em;
   border-radius: .25em;
@@ -48,7 +21,7 @@ html, body {
   box-shadow:         5px 5px 1px 1px rgba(0, 0, 0, 0.75);
 }
 
-.project-item:hover {
+div.project-item:hover {
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 0.25em;
   background-color: rgba(105, 0, 234, 0.25);
@@ -58,31 +31,16 @@ html, body {
   box-shadow:         5px 5px 1px 1px rgba(11, 0, 25, 0.9);
 }
 
-.project-thumbnail {
+div.project-thumbnail {
   text-align: center;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-content: center; */
-  /* align-self: center; */
   padding: 0;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .project-thumbnail img {
-  margin: 0.25em auto;
+  margin: 1em auto 0em auto;
   border-radius: 0.2em;
   max-height: 100%;
   max-width: 100%;
-}
-
-.project-placeholder {
-  max-height: 25%;
-  max-width: 25%;
-}
-
-.icon-links {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0.5em;
 }

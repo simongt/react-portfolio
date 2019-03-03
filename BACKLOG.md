@@ -8,3 +8,4 @@
 * Create transitions between components
 * Resolve console errors on `<Pieces>`.
 * Improve the nav bar: hover styling
+* Lazy load the project GIFs, then recreate GIFs for more uniformity (dimensions and quality)

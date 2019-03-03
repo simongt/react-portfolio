@@ -4,7 +4,6 @@ import "./style.css";
 
 import { projects } from './seed';
 import Bit from "./Bit";
-// import SimonGT from "./SimonGT";
 
 import { Fade } from 'react-reveal';
 
@@ -36,15 +35,13 @@ class Bits extends Component {
       <div style={{
         display: 'grid',
         justifyContent: 'center center',
-      }}> {/* className='projects-container' */}
-
+      }}> {/* grid container for all projects */}
         <div style={{
           display: 'flex',
           flexFlow: 'row wrap',
           justifyContent: 'center',
           width: 'calc(100vw - 1em)'
         }}>
-          {/* <div><SimonGT/></div> */}
           {/* only use react-reveal effects for Chrome & Firefox */}
           {browser.isChrome || browser.isFirefox ? (
             projects.map(project => {
@@ -55,6 +52,7 @@ class Bits extends Component {
                   delay={pace * counter++} 
                   distance="10em"
                 >
+                  {/* project container */}
                   <Bit key={project.id} project={project} />
                 </Fade>
               ));
@@ -63,14 +61,13 @@ class Bits extends Component {
             projects.map(project => {
               return (!project.hidden && (
                 <div key={project.id}>
+                  {/* project container */}
                   <Bit project={project} />
                 </div>
               ));
             })
           )}
-          
         </div>
-
       </div>
     );
   }

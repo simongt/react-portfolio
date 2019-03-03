@@ -32,7 +32,7 @@ export const projects = [{
   title: "List Manager (React)",
   gifUrl: '/img/bits/to-do-react.gif',
   imgUrl: '/img/bits/to-do-react.jpg',
-  description: "Used React, FlexBox, CSS and SVG's to build List Manager, a desktop-responsive, full CRUD app to organize various lists of tasks.",
+  description: "Used React, FlexBox, CSS and SVG's to build List Manager, a responsive, full CRUD app to organize various lists of tasks.",
   live: 'https://simongt.github.io/react-to-do-list/',
   github: 'https://github.com/simongt/react-to-do-list',
   hidden: false,

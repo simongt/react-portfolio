@@ -4,7 +4,6 @@ h1.title {
 
 .content h1 {
   font-size: calc(100vmin/12);
-  /* font-family: 'Roboto Mono', monospace; */
   font-weight: 100;
 }
 
@@ -26,10 +25,6 @@ strong.emphasize {
   margin: 0;
 }
 
-.home-title a {
-  -webkit-text-stroke: 0.5px black;
-}
-
 ul.home-fa {
   display: flex;
   flex-flow: row nowrap;
@@ -41,22 +36,6 @@ ul.home-fa {
 ul.home-fa li {
   list-style-type: none;
   margin: 10px 0 0 0;
-}
-
-ul.home-fa i {
-  font-size: calc(100vmin/12);
-  color: rgba(255, 255, 255, 1);
-}
-
-ul.home-fa i:hover {
-  color: rgba(255, 204, 0, 1);
-  /* -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 1); */
-  /* -moz-box-shadow:    2px 2px 1px 1px rgba(0, 0, 0, 1); */
-  /* box-shadow:         2px 2px 1px 1px rgba(0, 0, 0, 1); */
-}
-
-ul.home-fa i:active {
-  color: hotpink;
 }
 
 ul.home-fa i.fa-linkedin {
@@ -73,7 +52,6 @@ ul.home-fa i.fa-envelope {
 }
 
 .subtitle {
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Encode Sans Condensed', sans-serif;
   font-size: 25%;
   letter-spacing: .01em;
