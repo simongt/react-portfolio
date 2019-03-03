@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import LazyLoad from 'react-lazy-load';
+import MediaQuery from 'react-responsive';
 
 import './style.css'
 
@@ -18,7 +18,7 @@ export class Bit extends Component {
         <div style={{ 
           display: 'flex',
           justifyContent: 'space-between',
-        }}> 
+        }}>
           {/* project title */}
           <h3>{title}</h3>
           {/* container for top-right buttons */}
@@ -29,18 +29,12 @@ export class Bit extends Component {
             {/* live link */}
             <a href={live} rel="noopener noreferrer" target="_blank">
               {/* open door icon (via font awesome) */}
-              <i
-                className="fas fa-door-open"
-                style={{ fontSize: '2em', paddingTop: '0.1em' }}
-              />
+              <i className="fas fa-door-open" />
             </a>
             {/* github link */}
             <a href={github} rel="noopener noreferrer" target="_blank">
               {/* github icon (via font awesome) */}
-              <i
-                className="fab fa-github"
-                style={{ fontSize: '2em', paddingTop: '0.1em' }}
-              />
+              <i className="fab fa-github" />
             </a>
           </div>
         </div>
@@ -48,9 +42,7 @@ export class Bit extends Component {
         <div className="project-thumbnail">
           {/* live link */}
           <a href={live}>
-            {/* <LazyLoad debounce={false}> */}
-              <img src={gifUrl} alt={title} />
-            {/* </LazyLoad> */}
+            <img src={gifUrl} alt={title} />
           </a>
         </div>
         {/* project description */}

@@ -1,6 +1,22 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
+  div.project-item {
+    min-width: 18em;
+    max-width: 18em;
+    min-height: 16em;
+    max-height: 16em;
+  }
+  .project-item h3 {
+    font-size: 1.1em;
+  }
+  .project-item a {
+    font-size: 1.1em;
+  }
+  .project-item p {
+    font-size: 0.8em;
+    padding-top: 0.5em;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -45,83 +61,22 @@
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
   /* Styles */
-    .bits-content {
-      padding: 0;
-      margin: 0;
-    }
-
-    .projects-container {
-      /* width: 100vw; */
-      max-width: 100vw;
-    }
-
-    .projects-container p {
-      font-weight: 100;
-    }
-
-    .project-item {
-      min-width: calc(100vmin - 4em);
-      background-color: rgba(0, 0, 0, 0.3);
-      margin: 0 .25em 0.5em .25em;
-    }
-
-    .project-item:hover {
-      background-color: rgba(105, 0, 234, 0.25);
-      border: 1px rgba(255, 255, 255, 0.8) solid;
-    }
-
-    .project-thumbnail {
-      margin: 0.5em 0;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      /* max-height: 100%; */
-      /* max-width: 100%; */
-    }
-
-    .project-thumbnail img {
-      border-radius: 6px;
-      /* height: auto; */
-      /* width: auto; */
-    }
-
-    .project-placeholder {
-      /* display: none; */
-      height: 25%;
-      width: 25%;
-    }
-
+  div.project-item {
+    min-width: 23.5em;
+    max-width: 23.5em;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
-
   /* Styles */
-
-  .bits-content {
-    padding: 0;
-    margin: 0;
+  div.project-item {
+    min-width: 21.5em;
+    max-width: 21.5em;
   }
-
-  .projects-container {
-    /* width: 100vw; */
-    max-width: 100vw;
+  .project-item h3 {
+    padding-top: 0.45em;
+    font-size: 1.2em;
   }
-
-  .projects-container p {
-    font-weight: 100;
-  }
-
-  .project-item {
-    min-width: calc(100vmin - 4em);
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 .5em 0.5em .5em;
-  }
-
-  .project-item:hover {
-    background-color: rgba(105, 0, 234, 0.25);
-    border: 1px rgba(255, 255, 255, 0.8) solid;
-  }
-
 }
 
 /* iPhone XS Max, XR ----------- */

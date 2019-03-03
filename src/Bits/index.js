@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Fade } from 'react-reveal';
 
 import "./style.css";
-// import "./responsive.css";
+import "./responsive.css";
 
 import { projects } from './seed';
 import Bit from "./Bit";
@@ -41,7 +41,7 @@ class Bits extends Component {
           display: 'flex',
           flexFlow: 'row wrap',
           justifyContent: 'center',
-          width: 'calc(100vw - 1em)'
+          width: 'calc(100vw - 1em)',
         }}>
           {/* only use react-reveal effects for Chrome & Firefox */}
           {browser.isChrome || browser.isFirefox ? (
