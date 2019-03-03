@@ -22,7 +22,7 @@ export class Bit extends Component {
           {/* project title */}
           <h3>{title}</h3>
           {/* container for top-right buttons */}
-          <div style={{
+          <div className='icon-buttons' style={{
             display: 'flex',
             justifyContent: 'space-between',
           }}>
