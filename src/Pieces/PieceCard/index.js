@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import LazyLoad from 'react-lazy-load';
+// import LazyLoad from 'react-lazy-load';
 
 import "./style.css";
 
@@ -11,13 +11,13 @@ const PieceCard = ({ photo }) => {
   return (
     <div id={`card-${index}`} className="piece-card">
       <div className="photo">
-        <LazyLoad debounce={false}>
+        {/* <LazyLoad debounce={false}> */}
           <img
             src={imageUrl} 
             alt={`${index + 1}: ${title} [Photography by Simon G. Tsegay]`}
             onContextMenu={`return false;`}
           />
-        </LazyLoad>
+        {/* </LazyLoad> */}
       </div>
       <div className="details">
         <span className="index" />

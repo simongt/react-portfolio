@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Fade } from 'react-reveal';
+
 import "./style.css";
 // import "./responsive.css";
 
 import { projects } from './seed';
 import Bit from "./Bit";
 
-import { Fade } from 'react-reveal';
 
 class Bits extends Component {
 
