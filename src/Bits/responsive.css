@@ -1,3 +1,132 @@
+/* General Breakpoints */
+@media only screen and (min-width: 1920px) {
+  /* Styles */
+  div.project-item {
+    min-width: 28.5em;
+    max-width: 28.5em;
+    min-height: 24em;
+    max-height: 24em;
+    -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+  }
+  .project-item h3 {
+    font-size: 1.75em;
+  }
+  .icon-buttons a {
+    font-size: 1.75em;
+    margin-top: 0em;
+    padding-left: 0.25em;
+  }
+  .project-item p {
+    font-size: 1em;
+    padding-top: 0.5em;
+    font-weight: lighter;
+  }
+}
+
+@media only screen and (max-width: 1919px) and (min-width: 1280px) {
+  /* Styles */
+  div.project-item {
+    min-width: 25.25em;
+    max-width: 25.25em;
+    min-height: 21.5em;
+    max-height: 21.5em;
+    -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+  }
+  .project-item h3 {
+    font-size: 1.55em;
+  }
+  .icon-buttons a {
+    font-size: 1.55em;
+    margin-top: 0em;
+    padding-left: 0.25em;
+  }
+  .project-item p {
+    font-size: 0.9em;
+    padding-top: 0.5em;
+    font-weight: lighter;
+  }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 960px) {
+  /* Styles */
+  div.project-item {
+    min-width: 28em;
+    max-width: 28em;
+    min-height: 21em;
+    max-height: 21em;
+    -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+  }
+  .project-item h3 {
+    font-size: 1.75em;
+  }
+  .icon-buttons a {
+    font-size: 1.75em;
+    margin-top: 0em;
+    padding-left: 0.25em;
+  }
+  .project-item p {
+    font-size: 0.9em;
+    padding-top: 0.5em;
+    font-weight: lighter;
+  }
+}
+
+@media only screen and (max-width: 959px) and (min-width: 640px) {
+  /* Styles */
+  div.project-item {
+    min-width: 37.5em;
+    max-width: 37.5em;
+    min-height: 23em;
+    max-height: 23em;
+    -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+  }
+  .project-item h3 {
+    font-size: 1.25em;
+  }
+  .icon-buttons a {
+    font-size: 1.25em;
+    margin-top: 0em;
+    padding-left: 0.25em;
+  }
+  .project-item p {
+    font-size: 0.8em;
+    padding-top: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 639px) and (min-width: 400px) {
+  /* Styles */
+  div.project-item {
+    min-width: 23em;
+    max-width: 23em;
+    min-height: 16.5em;
+    max-height: 16.5em;
+    -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
+  }
+  .project-item h3 {
+    font-size: 1.25em;
+  }
+  .icon-buttons a {
+    font-size: 1.25em;
+    margin-top: 0em;
+    padding-left: 0.25em;
+  }
+  .project-item p {
+    font-size: 0.8em;
+    padding-top: 0.5em;
+  }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
@@ -9,7 +138,6 @@
     -webkit-box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow:    3px 3px 1px rgba(0, 0, 0, 0.75);
     box-shadow:         3px 3px 1px rgba(0, 0, 0, 0.75);
-
   }
   .project-item h3 {
     font-size: 1.1em;
@@ -41,9 +169,7 @@
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
-
   /* Styles */
-
 }
 
 /* iPhone 6, 7, 8 ----------- */
@@ -75,7 +201,6 @@
     -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
     box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
-
   }
   .project-item h3 {
     font-size: 1.25em;
@@ -101,7 +226,6 @@
     -webkit-box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow:    4px 4px 1px 1px rgba(0, 0, 0, 0.75);
     box-shadow:         4px 4px 1px 1px rgba(0, 0, 0, 0.75);
-
   }
   .project-item h3 {
     font-size: 1.25em;
@@ -126,17 +250,3 @@
   /* Styles */
 }
 
-@media (min-width: 1181px) {
-  /* Styles */
-  .project-item {
-    margin: 12px 24px 24px 16px;
-  }
-}
-
-@media (min-width: 1181px) {
-  /* Styles */
-  /* .project-item {
-    min-width: calc(100vmin - 100vmin/2);
-    margin: 12px 24px 24px 16px;
-  } */
-}
