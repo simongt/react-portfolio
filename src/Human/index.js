@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Tabs from "./Tabs";
+import { Fade } from 'react-reveal';
 import "./style.css";
 import "./responsive.css";
-import { Fade } from 'react-reveal';
 
 class Human extends Component {
   
