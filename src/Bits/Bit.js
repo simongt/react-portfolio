@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazy-load';
 
 import './style.css'
 
@@ -47,7 +48,9 @@ export class Bit extends Component {
         <div className="project-thumbnail">
           {/* live link */}
           <a href={live}>
-            <img src={gifUrl} alt={title} />
+            <LazyLoad debounce={false}>
+              <img src={gifUrl} alt={title} />
+            </LazyLoad>
           </a>
         </div>
         {/* project description */}
