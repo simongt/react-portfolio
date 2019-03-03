@@ -11,3 +11,4 @@
 * Lazy load the project GIFs, then recreate GIFs for more uniformity (dimensions and quality)
 * Improve responsiveness for more mobile devices, especially Android based
 * Improve overall navbar responsiveness
+* Make navbar sticky
