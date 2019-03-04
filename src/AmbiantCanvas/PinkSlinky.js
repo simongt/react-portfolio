@@ -7,18 +7,18 @@ const { cos, sin, round } = Math;
 const pipeCount = 3;
 const pipePropCount = 8;
 const pipePropsLength = pipeCount * pipePropCount;
-const turnCount = 16;
+const turnCount = 32;
 const turnAmount = (360 / turnCount) * TO_RAD;
-const turnChanceRange = 33;
-const baseSpeed = 0.125;
-const rangeSpeed = 0.25;
-const baseTTL = 1000;
-const rangeTTL = 5000;
-const baseWidth = 250;
+const turnChanceRange = 58;
+const baseSpeed = 0.1;
+const rangeSpeed = 0.1;
+const baseTTL = 2500;
+const rangeTTL = 2500;
+const baseWidth = 500;
 const rangeWidth = 500;
-const baseHue = -100;
-const rangeHue = 100;
-const backgroundColor = 'hsla(260,75%,40%,1)';
+const baseHue = -90;
+const rangeHue = 75;
+const backgroundColor = 'hsla(256,75%,50%,1)';
 
 class PinkSlinky extends CanvasBackground {
   constructor(props) {

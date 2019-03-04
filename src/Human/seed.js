@@ -18,7 +18,7 @@ export const about = [{
 }, {
   id: uuid.v4(),
   label: "Creativity",
-  description: "Creativity is a gift to me, and it fills me with joy to share its fruit. Since discovering photography as a teen, I appreciated how it continues to challenge me in expressing a unique way of seeing the world. It challenges me to perceive a kind of beauty in everything, every moment. I find photographs to have an incredible power in their ability to invoke deep, genuine emotional connections while allowing me to savor and relive a distant moment. Having run a digital creative media business, it’s been a tremendous honor to capture treasured moments for clients all over the world.",
+  description: "Creativity is a gift to me, and it fills me with joy to share it. Ever since discovering photography as a teen, I appreciate how it  challenges me in expressing a unique way of seeing the world, to perceive a kind of beauty in everything, every moment. I find photographs to have an incredible power in their ability to invoke deep, genuine emotional connections while allowing me to savor and relive a distant moment. Having run a digital creative media business, it’s been a tremendous honor to capture treasured moments for clients all over the world.",
   hidden: false,
 }, {
   id: uuid.v4(),

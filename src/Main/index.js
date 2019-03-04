@@ -41,6 +41,11 @@ class Main extends Component {
     console.log('Main --> componentDidMount');
     console.log('--{ Main render cycle complete }--');
     console.log('');
+
+    // JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist
+    if (is.firefox()) {
+      document.body.style.background = 'hsla(256,75%,50%,1)';
+    }
     
     this.setState({
       browser: {
@@ -67,8 +72,7 @@ class Main extends Component {
     return (
       <Router>
         <div className="main">
-          {/* JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist */}
-          <PinkSlinky />
+          {!is.firefox() && <PinkSlinky/>}
           <NavBar />
           <div className="content">
             <Switch>
