@@ -13,6 +13,7 @@ import Home from "../Home";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
 import Human from "../Human";
+import Background from "./Background";
 import {
   PinkSlinky
 } from "../AmbiantCanvas";
@@ -69,9 +70,8 @@ class Main extends Component {
     return (
       <Router>
         <div className="background">
-          {/* canvas seems to run very slowly on most browsers */}
-          {/* {(is.chrome() || is.safari()) && <PinkSlinky />} */}
-          <PinkSlinky />
+          {/* JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist */}
+          {is.firefox() ? <Background /> : <PinkSlinky />}
           <div className="main">
             <NavBar />
             <div className="content">
