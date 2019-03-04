@@ -125,7 +125,6 @@
     padding: 0;
     color: rgba(255, 255, 255, 1);
   }
-
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {

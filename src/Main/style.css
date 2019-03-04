@@ -32,7 +32,6 @@ time, mark, audio, video {
 }
 
 html, body {
-  background-color: rgba(0, 0, 0, 0.85);
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -47,13 +46,6 @@ body {
   overflow-wrap: break-word;
   max-height: 100vh;
   max-width: 100vw;
-
-  background: url("./img/nyc-times-square.jpg") no-repeat bottom center fixed;
-
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
 }
 
 h1 {
@@ -94,15 +86,15 @@ a {
 }
 
 a:link {
-  color: rgba(255, 240, 224, 1);
+  color: rgba(255, 204, 0, 1);
 }
 
 a:visited {
-  color: rgba(255, 240, 224, 1);
+  color: rgba(255, 204, 0, 1);
 }
 
 a:hover {
-  color: rgba(255, 204, 0, 1);
+  color: orange;
 }
 
 a:active {
@@ -119,6 +111,29 @@ div.content {
   margin: 0 auto;
   padding: 0;
   color: rgba(255,255,255,1);
+}
+
+div.background {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+
+div.background::after {
+  content: "";
+  opacity: 1.0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -99;
+  background: url("./img/nyc-times-square.jpg") no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
 
 @keyframes appear {

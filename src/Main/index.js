@@ -13,6 +13,9 @@ import Home from "../Home";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
 import Human from "../Human";
+import {
+  PinkPlasma
+} from "../AmbiantCanvas";
 
 import "./style.css";
 import "./responsive.css";
@@ -65,41 +68,45 @@ class Main extends Component {
     const { browser } = this.state;
     return (
       <Router>
-        <div className="main">
-          <NavBar />
-          <div className="content">
-            <Switch>
-              <Route 
-                exact path="/"
-                component={() => (
-                  <Home browser={browser} path="/" />
-                )}
-              />
-              <Route 
-                path="/bits"
-                component={() => (
-                  <Bits browser={browser} path="/bits" />
-                )}
-              />
-              <Route 
-                path="/pieces"
-                component={() => (
-                  <Pieces browser={browser} path="/pieces" />
-                )}
-              />
-              <Route 
-                path="/human"
-                component={() => (
-                  <Human browser={browser} path="/human" />
-                )}
-              />
-              <Route 
-                path="*"
-                component={() => (
-                  <Home browser={browser} path="/" />
-                )}
-              />
-            </Switch>
+        <div className="background">
+          {/* <PinkPlasma/> seems to run very slowly on FireFox */}
+          {!is.firefox() && <PinkPlasma />}
+          <div className="main">
+            <NavBar />
+            <div className="content">
+              <Switch>
+                <Route 
+                  exact path="/"
+                  component={() => (
+                    <Home browser={browser} path="/" />
+                  )}
+                />
+                <Route 
+                  path="/bits"
+                  component={() => (
+                    <Bits browser={browser} path="/bits" />
+                  )}
+                />
+                <Route 
+                  path="/pieces"
+                  component={() => (
+                    <Pieces browser={browser} path="/pieces" />
+                  )}
+                />
+                <Route 
+                  path="/human"
+                  component={() => (
+                    <Human browser={browser} path="/human" />
+                  )}
+                />
+                <Route 
+                  path="*"
+                  component={() => (
+                    <Home browser={browser} path="/" />
+                  )}
+                />
+              </Switch>
+            </div>
           </div>
         </div>
       </Router>
