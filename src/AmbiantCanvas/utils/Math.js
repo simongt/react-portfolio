@@ -1,11 +1,11 @@
 const {
   PI,
-  cos,
-  sin,
+  // cos,
+  // sin,
   abs,
   sqrt,
   pow,
-  round,
+  // round,
   random,
   atan2
 } = Math;

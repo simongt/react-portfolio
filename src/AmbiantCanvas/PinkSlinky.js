@@ -12,15 +12,15 @@ const turnAmount = (360 / turnCount) * TO_RAD;
 const turnChanceRange = 33;
 const baseSpeed = 0.125;
 const rangeSpeed = 0.25;
-const baseTTL = 500;
-const rangeTTL = 1000;
+const baseTTL = 1000;
+const rangeTTL = 5000;
 const baseWidth = 250;
 const rangeWidth = 500;
 const baseHue = -100;
 const rangeHue = 100;
 const backgroundColor = 'hsla(260,75%,40%,1)';
 
-class PinkPlasma extends CanvasBackground {
+class PinkSlinky extends CanvasBackground {
   constructor(props) {
     super(props);
     this.tick = null;
@@ -33,7 +33,7 @@ class PinkPlasma extends CanvasBackground {
 
   draw() {
     this.updatePipes();
-    this.renderPinkPlasma();
+    this.renderPinkSlinky();
   }
 
   initPipes() {
@@ -106,8 +106,7 @@ class PinkPlasma extends CanvasBackground {
 
   drawPipe(x, y, life, ttl, width, hue) {
     this.ctx.a.save();
-    // this.ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.125})`;
-    this.ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.1})`;
+    this.ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.125})`;
     this.ctx.a.beginPath();
     this.ctx.a.arc(x, y, width, 0, TAU);
     this.ctx.a.stroke();
@@ -130,7 +129,7 @@ class PinkPlasma extends CanvasBackground {
     }
   }
 
-  renderPinkPlasma() {
+  renderPinkSlinky() {
     this.ctx.b.save();
     this.ctx.b.fillStyle = backgroundColor;
     this.ctx.b.fillRect(0, 0, this.canvas.b.width, this.canvas.b.height);
@@ -147,4 +146,4 @@ class PinkPlasma extends CanvasBackground {
   }
 }
 
-export default PinkPlasma;
+export default PinkSlinky;

@@ -14,7 +14,7 @@ import Bits from "../Bits";
 import Pieces from "../Pieces";
 import Human from "../Human";
 import {
-  PinkPlasma
+  PinkSlinky
 } from "../AmbiantCanvas";
 
 import "./style.css";
@@ -69,8 +69,8 @@ class Main extends Component {
     return (
       <Router>
         <div className="background">
-          {/* <PinkPlasma/> seems to run very slowly on FireFox */}
-          {!is.firefox() && <PinkPlasma />}
+          {/* canvas seems to run very slowly on most browsers */}
+          {is.chrome() && <PinkSlinky />}
           <div className="main">
             <NavBar />
             <div className="content">
