@@ -70,7 +70,8 @@ class Main extends Component {
       <Router>
         <div className="background">
           {/* canvas seems to run very slowly on most browsers */}
-          {(is.chrome() || is.safari()) && <PinkSlinky />}
+          {/* {(is.chrome() || is.safari()) && <PinkSlinky />} */}
+          <PinkSlinky />
           <div className="main">
             <NavBar />
             <div className="content">
