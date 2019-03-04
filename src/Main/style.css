@@ -113,31 +113,6 @@ div.content {
   color: rgba(255,255,255,1);
 }
 
-/* div.background {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: block;
-  position: relative;
-}
-
-div.background::after {
-  content: "";
-  opacity: 1.0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  height: 100%;
-  overflow: hidden;
-  z-index: -99;
-  background: url("./img/nyc-times-square.jpg") no-repeat bottom center fixed;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-} */
-
 @keyframes appear {
   0% {
     opacity: 0;

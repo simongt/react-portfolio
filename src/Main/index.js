@@ -66,45 +66,43 @@ class Main extends Component {
     const { browser } = this.state;
     return (
       <Router>
-        <div className="background">
+        <div className="main">
           {/* JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist */}
           <PinkSlinky />
-          <div className="main">
-            <NavBar />
-            <div className="content">
-              <Switch>
-                <Route 
-                  exact path="/"
-                  component={() => (
-                    <Home browser={browser} path="/" />
-                  )}
-                />
-                <Route 
-                  path="/bits"
-                  component={() => (
-                    <Bits browser={browser} path="/bits" />
-                  )}
-                />
-                <Route 
-                  path="/pieces"
-                  component={() => (
-                    <Pieces browser={browser} path="/pieces" />
-                  )}
-                />
-                <Route 
-                  path="/human"
-                  component={() => (
-                    <Human browser={browser} path="/human" />
-                  )}
-                />
-                <Route 
-                  path="*"
-                  component={() => (
-                    <Home browser={browser} path="/" />
-                  )}
-                />
-              </Switch>
-            </div>
+          <NavBar />
+          <div className="content">
+            <Switch>
+              <Route 
+                exact path="/"
+                component={() => (
+                  <Home browser={browser} path="/" />
+                )}
+              />
+              <Route 
+                path="/bits"
+                component={() => (
+                  <Bits browser={browser} path="/bits" />
+                )}
+              />
+              <Route 
+                path="/pieces"
+                component={() => (
+                  <Pieces browser={browser} path="/pieces" />
+                )}
+              />
+              <Route 
+                path="/human"
+                component={() => (
+                  <Human browser={browser} path="/human" />
+                )}
+              />
+              <Route 
+                path="*"
+                component={() => (
+                  <Home browser={browser} path="/" />
+                )}
+              />
+            </Switch>
           </div>
         </div>
       </Router>
