@@ -6,17 +6,14 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-// import NavBarLanding from "../NavBarLanding";
-// import HomeLanding from "../HomeLanding";
+import { PinkSlinky } from "../AmbiantCanvas";
 import NavBar from "../NavBar";
+// import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
+// import HomeLanding from "../HomeLanding";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
 import Human from "../Human";
-import Background from "./Background";
-import {
-  PinkSlinky
-} from "../AmbiantCanvas";
 
 import "./style.css";
 import "./responsive.css";
@@ -71,7 +68,7 @@ class Main extends Component {
       <Router>
         <div className="background">
           {/* JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist */}
-          {is.firefox() ? <Background /> : <PinkSlinky />}
+          <PinkSlinky />
           <div className="main">
             <NavBar />
             <div className="content">
