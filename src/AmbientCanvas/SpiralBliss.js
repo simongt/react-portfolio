@@ -20,9 +20,12 @@ const baseHue = -90;
 const rangeHue = 75;
 const backgroundColor = 'hsla(256,75%,50%,1)';
 
-class PinkSlinky extends CanvasBackground {
+class SpiralBliss extends CanvasBackground {
   constructor(props) {
+    console.log('SpiralBliss --> constructor: extends CanvasBackground ');
+    
     super(props);
+
     this.tick = null;
     this.pipeProps = null;
   }
@@ -33,7 +36,7 @@ class PinkSlinky extends CanvasBackground {
 
   draw() {
     this.updatePipes();
-    this.renderPinkSlinky();
+    this.SpiralBliss();
   }
 
   initPipes() {
@@ -47,15 +50,24 @@ class PinkSlinky extends CanvasBackground {
     let x, y, direction, speed, life, ttl, width, hue;
 
     x = rand(this.canvas.a.width);
+    
     y = this.center[1];
+    
     direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
+    
     speed = baseSpeed + rand(rangeSpeed);
+    
     life = 0;
+    
     ttl = baseTTL + rand(rangeTTL);
+    
     width = baseWidth + rand(rangeWidth);
+    
     hue = baseHue + rand(rangeHue);
 
-    this.pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
+    this.pipeProps.set(
+      [x, y, direction, speed, life, ttl, width, hue], i
+    );
   }
 
   updatePipes() {
@@ -129,7 +141,7 @@ class PinkSlinky extends CanvasBackground {
     }
   }
 
-  renderPinkSlinky() {
+  SpiralBliss() {
     this.ctx.b.save();
     this.ctx.b.fillStyle = backgroundColor;
     this.ctx.b.fillRect(0, 0, this.canvas.b.width, this.canvas.b.height);
@@ -146,4 +158,4 @@ class PinkSlinky extends CanvasBackground {
   }
 }
 
-export default PinkSlinky;
+export default SpiralBliss;

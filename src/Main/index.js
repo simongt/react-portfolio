@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { PinkSlinky } from "../AmbiantCanvas";
+import { SpiralBliss } from "../AmbientCanvas";
 import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
@@ -19,7 +19,6 @@ import "./style.css";
 import "./responsive.css";
 
 class Main extends Component {
-
   constructor(props) {
     super(props);
     console.log('Main --> constructor');
@@ -42,10 +41,8 @@ class Main extends Component {
     console.log('--{ Main render cycle complete }--');
     console.log('');
 
-    // JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist
-    if (is.firefox()) {
-      document.body.style.background = 'hsla(256,75%,50%,1)';
-    }
+    /* JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist. As a failsafe, setting background color to same as that of canvas. */
+    document.body.style.background = 'hsla(256,75%,50%,1)';
     
     this.setState({
       browser: {
@@ -72,7 +69,7 @@ class Main extends Component {
     return (
       <Router>
         <div className="main">
-          {!is.firefox() && <PinkSlinky/>}
+          {!is.firefox() && <SpiralBliss />}
           <NavBar />
           <div className="content">
             <Switch>

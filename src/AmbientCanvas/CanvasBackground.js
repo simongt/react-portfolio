@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 class CanvasBackground extends Component {
   constructor(props) {
+    console.log('CanvasBackground --> constructor');    
+    
     super(props);
+
     this.canvas = null;
     this.ctx = null;
     this.center = null;
@@ -10,6 +13,10 @@ class CanvasBackground extends Component {
   }
 
   componentDidMount() {
+    console.log('CanvasBackground --> componentDidMount');
+    console.log('--{ CanvasBackground render cycle complete }--');
+    console.log('');
+
     this.createCanvas();
     this.resize();
     this.init();
@@ -18,6 +25,10 @@ class CanvasBackground extends Component {
   }
 
   componentWillUnmount() {
+    console.log('CanvasBackground --> componentWillUnmount');
+    console.log('--{ CanvasBackground render cycle complete }--');
+    console.log('');
+
     if (this.frameId !== null) {
       window.cancelAnimationFrame(this.frameId);
     }
@@ -28,6 +39,8 @@ class CanvasBackground extends Component {
   draw() { }
 
   render() {
+    console.log('CanvasBackground --> render');
+
     const styles = {
       position: 'fixed',
       zIndex: -1,
@@ -38,7 +51,7 @@ class CanvasBackground extends Component {
     };
 
     return (
-      <div style={{backgroundColor: 'white'}}>
+      <div>
         <canvas id={'canvasA'} style={styles} />
         <canvas id={'canvasB'} style={styles} />
       </div>

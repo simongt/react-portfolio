@@ -1,9 +1,9 @@
 // Adapted from jwagner's Simplex Noise library in React.js
 
-import PinkSlinky from './PinkSlinky';
+import SpiralBliss from './SpiralBliss';
 import CanvasBackground from './CanvasBackground';
 
 export {
-  PinkSlinky,
+  SpiralBliss,
   CanvasBackground
 };
