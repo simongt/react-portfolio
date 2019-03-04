@@ -23,7 +23,7 @@ export const about = [{
 }, {
   id: uuid.v4(),
   label: "Leisure",
-  description: "My fiance and I currently live in the Bed-Stuy neighborhood of Brooklyn. In our leisure time, we enjoy exploring the outdoors, traveling the world and immersing in all its cultures together. Whenever my schedule allows for some down time, I keep up with basketball and football. I enjoy theater, chess and ping-pong. I'm also an avid fan of sci-fi novels, films and TV! 🤓🖖",
+  description: "My fiancèe and I currently live in the Bed-Stuy neighborhood of Brooklyn. In our leisure time, we enjoy exploring the outdoors, traveling the world and immersing in all its cultures together. Whenever my schedule allows for some down time, I keep up with basketball and football. I enjoy theater, chess and ping-pong. I'm also an avid fan of sci-fi novels, films and TV! 🤓🖖",
   hidden: false,
 }];
 

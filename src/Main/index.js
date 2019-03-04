@@ -72,46 +72,31 @@ class Main extends Component {
               <Route 
                 exact path="/"
                 component={() => (
-                  <Home 
-                    browser={browser} 
-                    path="/" 
-                  />
+                  <Home browser={browser} path="/" />
                 )}
               />
               <Route 
                 path="/bits"
                 component={() => (
-                  <Bits 
-                    browser={browser} 
-                    path="/bits" 
-                  />
+                  <Bits browser={browser} path="/bits" />
                 )}
               />
               <Route 
                 path="/pieces"
                 component={() => (
-                  <Pieces 
-                    browser={browser} 
-                    path="/pieces" 
-                  />
+                  <Pieces browser={browser} path="/pieces" />
                 )}
               />
               <Route 
                 path="/human"
                 component={() => (
-                  <Human 
-                    browser={browser} 
-                    path="/human" 
-                  />
+                  <Human browser={browser} path="/human" />
                 )}
               />
               <Route 
                 path="*"
                 component={() => (
-                  <Home 
-                    browser={browser} 
-                    path="/" 
-                  />
+                  <Home browser={browser} path="/" />
                 )}
               />
             </Switch>
