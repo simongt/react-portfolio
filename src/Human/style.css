@@ -4,7 +4,7 @@ ul {
 
 .human-wrapper {
   padding: calc(100vmax/50);
-  max-width: 960px;
+  max-width: 67em; /* TO-DO: responsivize */
   display: flex;
   text-align: justify;
   justify-content: center;
@@ -14,46 +14,20 @@ ul {
 
 .human-description {
   font-weight: 100;
-  font-size: 110%;
+  font-size: 110%; /* TO-DO: responsivize */
 }
 
 .human-photo img {
-  border: 3px rgba(255, 255, 255, 0.75) solid;
+  border: 0.15em rgba(255, 255, 255, 0.75) solid;
   border-radius: 50%;
-  max-width: 16em;
+  max-width: 16em; /* TO-DO: responsivize */
   padding: 0 0 0 0;
   margin: 0 0 0 1em;
+  -webkit-box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:    5px 5px 1px 1px rgba(0, 0, 0, 0.75);
+  box-shadow:         5px 5px 1px 1px rgba(0, 0, 0, 0.75);
+
 }
-
-/* .human-introduction {
-  max-width: 100%;
-  font-weight: 100;
-} */
-
-/* .collapsible h4:hover {
-  color: #fc0;
-  transition: 0.5s;
-} */
-
-/* .collapsible-content {
-  display: none;
-  transition: 1s;
-} */
-
-/* .collapsible-content.open {
-  display: block;
-  transition: 1s;
-} */
-
-/* button.button-block {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: rgba(255, 255, 255, 1);
-  font-size: inherit;
-  padding: inherit;
-  transition: 1s;
-} */
 
 .tabs {
   display: flex;
@@ -69,15 +43,13 @@ ul {
 
 .tab-list-item {
   list-style: none;
-  /* display: inline-block; */
-  border: 3px solid rgba(255, 255, 255, 0);
-  padding: 0.25em 0.5em;
-  margin-right: -3px;
+  border: 0.15em solid rgba(255, 255, 255, 0);
+  padding: 0.25em 0.5em; /* TO-DO: responsivize */
+  margin-right: -0.15em; /* TO-DO: responsivize */
 }
 
 .tab-list-active {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
-  border-width: 3px;
+  border-bottom: 0.15em solid rgba(255, 255, 255, 0.8);
 }
 
 .tab-list-active {
@@ -86,9 +58,11 @@ ul {
 
 .tab-content {
   background-color: rgba(0, 0, 0, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  /* border-radius: 25px 0 25px 0; */
-  border-radius: 1em;
+  border: 0.15em solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.5em;
   margin: 0;
-  padding: 0.75em 1em;
+  padding: 0.75em 1em; /* TO-DO: responsivize */
+  -webkit-box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:    5px 5px 1px 1px rgba(0, 0, 0, 0.75);
+  box-shadow:         5px 5px 1px 1px rgba(0, 0, 0, 0.75);
 }

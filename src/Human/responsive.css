@@ -1,95 +1,252 @@
-@media (max-width: 970px) {
+/* General Breakpoints */
+@media only screen and (min-width: 1920px) {
+  /* Styles */
+}
+
+@media only screen and (max-width: 1919px) and (min-width: 1280px) {
+  /* Styles */
+  .human-wrapper {
+    padding: calc(100vmax/50);
+    max-width: 75em;
+    flex-flow: row nowrap;
+  }
+
+  .human-description {
+    font-size: 110%;
+  }
+
+  .human-photo img {
+    max-width: 20em;
+    padding: 0 0 0 0;
+    margin: 0 0 1em 0;
+  }
+
+  .tabs {
+    margin-left: 0.5em;
+  }
+
+  .tab-list {
+    padding-left: 0;
+  }
+
+  .tab-list-item {
+    font-size: 100%;
+    padding: 0.25em 1em 0.25em 0.5em;
+    margin-right: -0.15em;
+  }
+
+  .tab-content {
+    margin: 0;
+    padding: 0.75em 1em;
+  }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 960px) {
+  /* Styles */
+  .human-wrapper {
+    padding: calc(100vmax/50);
+    max-width: 60em;
+    flex-flow: row nowrap;
+  }
 
   .human-description {
     font-size: 100%;
   }
 
-}
-
-@media (max-width: 932px) {
-
-  .human-description {
-    font-size: 90%;
-  }
-
-}
-
-@media (max-width: 830px) {
-
-  .human-description {
-    font-size: 80%;
-  }
-
-}
-
-@media (max-width: 784px) {
-
-  .human-wrapper {
-    margin: 0 1em 0 0;
-    display: block;
-  }
-
-  .human-photo {
+  .human-photo img {
+    max-width: 15em;
     padding: 0 0 0 0;
-    margin: 10px auto;
-    text-align: center;
+    margin: 0 0 1em 0;
   }
 
   .tabs {
-    margin-left: 0;
+    margin-left: 0.5em;
   }
 
-  .human-description {
-    font-size: 90%;
+  .tab-list {
+    padding-left: 0;
   }
 
-}
-
-@media (max-width: 666px) {
-
-  .tab-list-item,
-  .human-description {
-    font-size: 90%;
-  }
-
-}
-
-@media (max-width: 570px) {
-
-  .tab-list-item,
-  .human-description {
+  .tab-list-item {
     font-size: 80%;
+    padding: 0.25em 1em 0.25em 0.5em;
+    margin-right: -0.15em;
   }
 
+  .tab-content {
+    margin: 0;
+    padding: 0.75em 1em;
+  }
 }
 
-@media (max-width: 441px) {
-
+@media only screen and (max-width: 959px) and (min-width: 640px) {
+  /* Styles */
   .human-wrapper {
-    /* text-align: left; */
+    padding: calc(100vmax/50);
+    max-width: 40em;
+    flex-flow: row wrap;
+  }
+
+  .human-description {
+    font-size: 86%;
+  }
+
+  .human-photo img {
+    max-width: 15em;
+    padding: 0 0 0 0;
+    margin: 0 0 1em 0;
+  }
+
+  .tabs {
+    margin-left: 0.5em;
+  }
+
+  .tab-list {
+    padding-left: 0;
   }
 
   .tab-list-item {
     font-size: 70%;
+    padding: 0.25em 0.5em;
+    margin-right: -0.15em;
   }
 
+  .tab-content {
+    margin: 0;
+    padding: 0.75em 1em;
+  }
 }
 
-/* iPhone */
+@media only screen and (max-width: 639px) and (min-width: 400px) {
+  /* Styles */
+  .human-wrapper {
+    padding: calc(100vmax/50);
+    max-width: 25em;
+    flex-flow: row wrap;
+  }
+
+  .human-description {
+    font-size: 66%;
+  }
+
+  .human-photo img {
+    max-width: 12em;
+    padding: 0 0 0 0;
+    margin: 0 0 1em 0;
+  }
+
+  .tabs {
+    margin-left: 0.5em;
+  }
+
+  .tab-list {
+    padding-left: 0;
+  }
+
+  .tab-list-item {
+    font-size: 50%;
+    padding: 0.25em 0.5em;
+    margin-right: -0.15em;
+  }
+
+  .tab-content {
+    margin: 0;
+    padding: 0.75em 1em;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+  .human-wrapper {
+    padding: calc(100vmax/50);
+    max-width: 67em;
+    flex-flow: row wrap;
+  }
+
+  .human-description {
+    font-size: 66%;
+  }
+
+  .human-photo img {
+    max-width: 12em;
+    padding: 0 0 0 0;
+    margin: 0 0 1em 0;
+  }
+
+  .tabs {
+    margin-left: 0.5em;
+  }
+
+  .tab-list {
+    padding-left: 0;
+  }
+
+  .tab-list-item {
+    font-size: 50%;
+    padding: 0.25em 0.5em;
+    margin-right: -0.15em;
+  }
+
+  .tab-content {
+    margin: 0;
+    padding: 0.75em 1em;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
   /* Styles */
-    .tab-list-item,
-    .human-description {
-      font-size: 90%;
-    }
+
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
   /* Styles */
-  .human-wrapper {
-    padding: 0 0 0 0.5em;
-  }
-    .tab-list-item {
-      font-size: 68%;
-    }
+
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
 }
