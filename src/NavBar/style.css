@@ -80,6 +80,7 @@ ul.header-right li a {
 
 ul.header-right li a:hover {
   text-decoration: overline;
+  color: #fc0;
 }
 
 /* isn't this supposed to be :active? */
