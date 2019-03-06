@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { SpiralBliss } from "../AmbientCanvas";
+import { SpiralBliss, BluePrint } from "../AmbientCanvas";
 import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
@@ -70,6 +70,7 @@ class Main extends Component {
       <Router>
         <div className="main">
           {!is.firefox() && <SpiralBliss />}
+          {/* {!is.firefox() && <BluePrint />} */}
           <NavBar />
           <div className="content">
             <Switch>
