@@ -4,7 +4,7 @@ import { HALF_PI, TAU, TO_RAD, rand, fadeInOut } from './utils/Math';
 
 const { cos, sin, round } = Math;
 
-const pipeCount = 8;
+const pipeCount = 32;
 const pipePropCount = 8;
 const pipePropsLength = pipeCount * pipePropCount;
 const turnCount = 6;
@@ -18,10 +18,10 @@ const turnChanceRange = 360;
 // const rangeWidth = 1;
 const baseSpeed = 0.5;
 const rangeSpeed = 0.25;
-const baseTTL = 150;
-const rangeTTL = 150;
-const baseWidth = 2;
-const rangeWidth = 1;
+const baseTTL = 50;
+const rangeTTL = 950;
+const baseWidth = 1.0;
+const rangeWidth = 0.5;
 // Violet Theme
 // const baseHue = 260;
 // const rangeHue = 30;
@@ -51,37 +51,29 @@ class BluePrint extends CanvasBackground {
   }
 
   initPipes() {
-    console.log(this.canvas.a);
-    console.log(this.canvas.b);
-    console.table(this.center);
+    console.log('BluePrint --> initPipes',);
     this.pipeProps = new Float32Array(pipePropsLength);
     for (let i = 0; i < pipePropsLength; i += pipePropCount) {
       this.initPipe(i);
+      // this.initPipe(i);
+      // this.initPipe(i);
+      // this.initPipe(i);
     }
   }
 
   initPipe(i) {
     // console.log('BluePrint --> initPipe: ', i);
-
     let x, y, direction, speed, life, ttl, width, hue;
-
     x = rand(this.canvas.a.width);
-
-    // y = this.center[1];
-    y = this.canvas.a.height;
-    
+    y = this.center[1];
+    // y = this.canvas.a.height;
     direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
-    
+    // direction = TAU - HALF_PI;
     speed = baseSpeed + rand(rangeSpeed);
-    
     ttl = baseTTL + rand(rangeTTL);
-    
     width = baseWidth + rand(rangeWidth);
-    
     life = 0;
-
     hue = baseHue + rand(rangeHue);
-
     this.pipeProps.set(
       [x, y, direction, speed, life, ttl, width, hue], i
     );
@@ -140,7 +132,7 @@ class BluePrint extends CanvasBackground {
 
   drawPipe(x, y, life, ttl, width, hue) {
     this.ctx.a.save();
-    this.ctx.a.strokeStyle = `hsla(${hue},66%,100%,${fadeInOut(life, ttl) * 0.125})`;
+    this.ctx.a.strokeStyle = `hsla(${hue},66%,100%,${fadeInOut(life, ttl) * 0.0625})`;
     this.ctx.a.beginPath();
     this.ctx.a.arc(x, y, width, 0, TAU);
     this.ctx.a.stroke();
