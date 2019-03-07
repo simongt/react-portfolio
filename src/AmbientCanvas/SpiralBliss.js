@@ -7,17 +7,17 @@ const { cos, sin, round } = Math;
 const pipeCount = 3;
 const pipePropCount = 8;
 const pipePropsLength = pipeCount * pipePropCount;
-const turnCount = 32;
+const turnCount = 360 * 3;
 const turnAmount = (360 / turnCount) * TO_RAD;
 const turnChanceRange = 58;
-const baseSpeed = 0.1;
-const rangeSpeed = 0.1;
-const baseTTL = 2500;
-const rangeTTL = 2500;
+const baseSpeed = 0.2;
+const rangeSpeed = 0.2;
+const baseTTL = 1000;
+const rangeTTL = 4000;
 const baseWidth = 500;
 const rangeWidth = 500;
-const baseHue = -90;
-const rangeHue = 75;
+const baseHue = 270;
+const rangeHue = 60;
 const backgroundColor = 'hsla(256,75%,50%,1)';
 
 class SpiralBliss extends CanvasBackground {
@@ -151,8 +151,9 @@ class SpiralBliss extends CanvasBackground {
     this.ctx.b.filter = 'blur(4em)';
     this.ctx.b.drawImage(this.canvas.a, 0, 0);
     this.ctx.b.restore();
-
+    
     this.ctx.b.save();
+    this.ctx.b.filter = `blur(0.125em)`;
     this.ctx.b.drawImage(this.canvas.a, 0, 0);
     this.ctx.b.restore();
   }

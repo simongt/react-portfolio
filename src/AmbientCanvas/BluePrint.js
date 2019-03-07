@@ -4,21 +4,32 @@ import { HALF_PI, TAU, TO_RAD, rand, fadeInOut } from './utils/Math';
 
 const { cos, sin, round } = Math;
 
-const pipeCount = 96;
-const pipePropCount = 32;
+const pipeCount = 8;
+const pipePropCount = 8;
 const pipePropsLength = pipeCount * pipePropCount;
-const turnCount = 8;
+const turnCount = 6;
 const turnAmount = (360 / turnCount) * TO_RAD;
 const turnChanceRange = 360;
-const baseSpeed = 1.0;
-const rangeSpeed = 0.5;
-const baseTTL = 50;
-const rangeTTL = 950;
+// const baseSpeed = 1.0;
+// const rangeSpeed = 0.5;
+// const baseTTL = 250;
+// const rangeTTL = 750;
+// const baseWidth = 2;
+// const rangeWidth = 1;
+const baseSpeed = 0.5;
+const rangeSpeed = 0.25;
+const baseTTL = 150;
+const rangeTTL = 150;
 const baseWidth = 2;
 const rangeWidth = 1;
-const baseHue = -180;
-const rangeHue = 165;
-const backgroundColor = 'hsla(256,66%,33%,1)';
+// Violet Theme
+// const baseHue = 260;
+// const rangeHue = 30;
+// const backgroundColor = 'hsla(256,75%,50%,1)';
+// Blue Theme
+const baseHue = 215;
+const rangeHue = 40;
+const backgroundColor = 'hsla(222,100%,40%,1)';
 
 class BluePrint extends CanvasBackground {
   constructor(props) {
@@ -40,6 +51,9 @@ class BluePrint extends CanvasBackground {
   }
 
   initPipes() {
+    console.log(this.canvas.a);
+    console.log(this.canvas.b);
+    console.table(this.center);
     this.pipeProps = new Float32Array(pipePropsLength);
     for (let i = 0; i < pipePropsLength; i += pipePropCount) {
       this.initPipe(i);
@@ -47,16 +61,18 @@ class BluePrint extends CanvasBackground {
   }
 
   initPipe(i) {
+    // console.log('BluePrint --> initPipe: ', i);
+
     let x, y, direction, speed, life, ttl, width, hue;
 
     x = rand(this.canvas.a.width);
-    
-    y = this.center[1];
+
+    // y = this.center[1];
+    y = this.canvas.a.height;
     
     direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
     
     speed = baseSpeed + rand(rangeSpeed);
-    
     
     ttl = baseTTL + rand(rangeTTL);
     
@@ -81,13 +97,13 @@ class BluePrint extends CanvasBackground {
 
   updatePipe(i) {
     let
-      i2 = 1 + i,
-      i3 = 2 + i,
-      i4 = 3 + i,
-      i5 = 4 + i,
-      i6 = 5 + i,
-      i7 = 6 + i,
-      i8 = 7 + i;
+      i2 = 1 + i, // i: x, i2: y
+      i3 = 2 + i, // direction
+      i4 = 3 + i, // speed
+      i5 = 4 + i, // life
+      i6 = 5 + i, // ttl
+      i7 = 6 + i, // width
+      i8 = 7 + i; // hue
     let x, y, direction, speed, life, ttl, width, hue, turnChance, turnBias;
 
     x = this.pipeProps[i];
@@ -102,10 +118,14 @@ class BluePrint extends CanvasBackground {
     this.drawPipe(x, y, life, ttl, width, hue);
 
     life++;
+    
     x += cos(direction) * speed;
     y += sin(direction) * speed;
+    
     turnChance = !(this.tick % round(rand(turnChanceRange))) && (!(round(x) % 6) || !(round(y) % 6));
+
     turnBias = round(rand(1)) ? -1 : 1;
+    
     direction += turnChance ? turnAmount * turnBias : 0;
 
     this.pipeProps[i] = x;
@@ -114,12 +134,13 @@ class BluePrint extends CanvasBackground {
     this.pipeProps[i5] = life;
 
     this.checkBounds(x, y);
-    life > ttl && this.initPipe(i);
+    
+    life > ttl && this.initPipe(i); // if pipe dies, spawn new pipe
   }
 
   drawPipe(x, y, life, ttl, width, hue) {
     this.ctx.a.save();
-    this.ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.5})`;
+    this.ctx.a.strokeStyle = `hsla(${hue},66%,100%,${fadeInOut(life, ttl) * 0.125})`;
     this.ctx.a.beginPath();
     this.ctx.a.arc(x, y, width, 0, TAU);
     this.ctx.a.stroke();
@@ -148,12 +169,15 @@ class BluePrint extends CanvasBackground {
     this.ctx.b.fillRect(0, 0, this.canvas.b.width, this.canvas.b.height);
     this.ctx.b.restore();
 
+    // tail
     this.ctx.b.save();
-    this.ctx.b.filter = 'blur(4em)';
+    this.ctx.b.filter = 'blur(0em)';
     this.ctx.b.drawImage(this.canvas.a, 0, 0);
     this.ctx.b.restore();
-
+    
+    // head
     this.ctx.b.save();
+    this.ctx.b.filter = 'blur(0em)';
     this.ctx.b.drawImage(this.canvas.a, 0, 0);
     this.ctx.b.restore();
   }
