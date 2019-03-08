@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Particles from "react-particles-js";
 
-export class NightSky extends Component {
+export class Asterisms extends Component {
   render() {
-    console.log('NightSky --> render');
+    console.log('Asterisms --> render');
     return (
       <div
         className="particles-container"
@@ -14,6 +14,10 @@ export class NightSky extends Component {
           width: "100%",
           height: "100%",
           zIndex: -1,
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <Particles
@@ -23,7 +27,11 @@ export class NightSky extends Component {
             left: "0",
             width: "100%",
             height: "100%",
-            zIndex: -1
+            zIndex: -1,
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
           params={{
             "particles": {
@@ -92,14 +100,6 @@ export class NightSky extends Component {
             "interactivity": {
               "detect_on": "canvas",
               "events": {
-                "onhover": {
-                  "enable": false,
-                  "mode": "repulse"
-                },
-                "onclick": {
-                  "enable": false,
-                  "mode": "push"
-                },
                 "resize": true
               },
               "modes": {
@@ -136,4 +136,4 @@ export class NightSky extends Component {
   }
 }
 
-export default NightSky;
+export default Asterisms;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Particles from "react-particles-js";
 
-export class Simple extends Component {
+export class ShootingStars extends Component {
   render() {
-    console.log('Simple --> render');
+    console.log('ShootingStars --> render');
     return (
       <div
         className="particles-container"
@@ -13,7 +13,11 @@ export class Simple extends Component {
           left: "0",
           width: "100%",
           height: "100%",
-          zIndex: -1,
+          zIndex: -2,
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <Particles
@@ -23,7 +27,11 @@ export class Simple extends Component {
             left: "0",
             width: "100%",
             height: "100%",
-            zIndex: -1
+            zIndex: -2,
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
           params={{
             "particles": {
@@ -49,7 +57,7 @@ export class Simple extends Component {
                 "anim": {
                   "enable": true,
                   "speed": 1,
-                  "opacity_min": 0.025
+                  "opacity_min": 0.01
                 }
               }
             },
@@ -61,4 +69,4 @@ export class Simple extends Component {
   }
 }
 
-export default Simple;
+export default ShootingStars;

@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { Simple } from "../AnimatedParticles/Simple";
-import { NightSky } from "../AnimatedParticles/NightSky";
+import { ShootingStars } from "../AnimatedParticles/ShootingStars";
+import { Asterisms } from "../AnimatedParticles/Asterisms";
 import { SpiralBliss } from "../AmbientCanvas";
 import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
@@ -72,8 +72,8 @@ class Main extends Component {
       <Router>
         <div className="main">
           {!is.firefox() && <SpiralBliss />}
-          {!is.firefox() && <NightSky />}
-          {!is.firefox() && <Simple />}
+          {!is.firefox() && <ShootingStars />}
+          {!is.firefox() && <Asterisms />}
           <NavBar />
           <div className="content">
             <Switch>

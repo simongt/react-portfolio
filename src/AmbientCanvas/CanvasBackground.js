@@ -51,7 +51,14 @@ class CanvasBackground extends Component {
     };
 
     return (
-      <div>
+      <div
+        style={{
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <canvas id={'canvasA'} style={styles} />
         <canvas id={'canvasB'} style={styles} />
       </div>
