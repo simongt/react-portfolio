@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { Simple } from "../ParticlesBG/Simple";
-import { NightSky } from "../ParticlesBG/NightSky";
+import { Simple } from "../AnimatedParticles/Simple";
+import { NightSky } from "../AnimatedParticles/NightSky";
 import { SpiralBliss, BluePrint } from "../AmbientCanvas";
 import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
