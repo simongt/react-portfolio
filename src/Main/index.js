@@ -8,7 +8,7 @@ import is from "is_js";
 
 import { Simple } from "../AnimatedParticles/Simple";
 import { NightSky } from "../AnimatedParticles/NightSky";
-import { SpiralBliss, BluePrint } from "../AmbientCanvas";
+import { SpiralBliss } from "../AmbientCanvas";
 import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
@@ -71,10 +71,9 @@ class Main extends Component {
     return (
       <Router>
         <div className="main">
-          <Simple />
-          <NightSky />
           {!is.firefox() && <SpiralBliss />}
-          {/* {!is.firefox() && <BluePrint />} */}
+          {!is.firefox() && <NightSky />}
+          {!is.firefox() && <Simple />}
           <NavBar />
           <div className="content">
             <Switch>
