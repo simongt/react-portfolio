@@ -43,7 +43,7 @@ class CanvasBackground extends Component {
 
     const styles = {
       position: 'fixed',
-      zIndex: -1,
+      zIndex: -99,
       top: 0,
       left: 0,
       width: 100 + 'vw',

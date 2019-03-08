@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
+import ParticlesBG from "../ParticlesBG";
 import { SpiralBliss, BluePrint } from "../AmbientCanvas";
 import NavBar from "../NavBar";
 // import NavBarLanding from "../NavBarLanding";
@@ -69,6 +70,7 @@ class Main extends Component {
     return (
       <Router>
         <div className="main">
+          <ParticlesBG />
           {!is.firefox() && <SpiralBliss />}
           {/* {!is.firefox() && <BluePrint />} */}
           <NavBar />
