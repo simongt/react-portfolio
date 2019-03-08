@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
 import Particles from "react-particles-js";
 
-export class ParticlesBG extends Component {
+export class NightSky extends Component {
   render() {
-    console.log('ParticlesBG --> render');
+    console.log('NightSky --> render');
     return (
       <div
         className="particles-container"
         style={{
-          padding: "0",
-          margin: "0",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           position: "absolute",
           top: "0",
           left: "0",
-          width: "100vw",
-          height: "100vh",
+          width: "100%",
+          height: "100%",
           zIndex: -1
         }}
       >
         <Particles
           style={{
-            // border: "1px solid red",
-            width: "100vw",
-            height: "100vh"
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+            zIndex: -1
           }}
-
           params={{
             "particles": {
               "number": {
-                "value": 66,
+                "value": 50,
                 "density": {
                   "enable": true,
                   "value_area": 800
@@ -47,7 +44,7 @@ export class ParticlesBG extends Component {
                   "color": "#000000"
                 },
                 "polygon": {
-                  "nb_sides": 5
+                  "nb_sides": 3
                 }
               },
               "opacity": {
@@ -55,13 +52,13 @@ export class ParticlesBG extends Component {
                 "random": false,
                 "anim": {
                   "enable": false,
-                  "speed": 1,
+                  "speed": 0.5,
                   "opacity_min": 0.1,
                   "sync": false
                 }
               },
               "size": {
-                "value": 3,
+                "value": 1.5,
                 "random": false,
                 "anim": {
                   "enable": false,
@@ -139,4 +136,4 @@ export class ParticlesBG extends Component {
   }
 }
 
-export default ParticlesBG;
+export default NightSky;
