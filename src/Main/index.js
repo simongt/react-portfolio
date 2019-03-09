@@ -43,14 +43,15 @@ class Main extends Component {
     console.log('');
 
     /* JavaScript engine seems to process animations especially slowly on FireFox when running Canvas + Typist. As a failsafe, setting background color to same as that of canvas. */
-    document.body.style.background = 
+    document.body.style.background = (
       is.firefox() ?
         `linear-gradient(
           to right bottom,
           hsla(256,75%,25%,1),
           hsla(256,75%,50%,1),
           hsla(345,75%,55%,1)
-        )` : `hsla(256,75%,50%,1)`;
+        )` : `hsla(256,75%,50%,1)`
+    );
     
     this.setState({
       browser: {
