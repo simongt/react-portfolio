@@ -20,9 +20,9 @@ const baseHue = 270;
 const rangeHue = 60;
 const backgroundColor = 'hsla(256,75%,50%,1)';
 
-class SpiralBliss extends CanvasBackground {
+class NebulousBliss extends CanvasBackground {
   constructor(props) {
-    console.log('SpiralBliss --> constructor: extends CanvasBackground ');
+    console.log('NebulousBliss --> constructor: extends CanvasBackground ');
     
     super(props);
 
@@ -36,7 +36,7 @@ class SpiralBliss extends CanvasBackground {
 
   draw() {
     this.updatePipes();
-    this.SpiralBliss();
+    this.NebulousBliss();
   }
 
   initPipes() {
@@ -141,7 +141,7 @@ class SpiralBliss extends CanvasBackground {
     }
   }
 
-  SpiralBliss() {
+  NebulousBliss() {
     this.ctx.b.save();
     this.ctx.b.fillStyle = backgroundColor;
     this.ctx.b.fillRect(0, 0, this.canvas.b.width, this.canvas.b.height);
@@ -159,4 +159,4 @@ class SpiralBliss extends CanvasBackground {
   }
 }
 
-export default SpiralBliss;
+export default NebulousBliss;

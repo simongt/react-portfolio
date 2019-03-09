@@ -6,16 +6,15 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { ShootingStars } from "../AnimatedParticles/ShootingStars";
-import { Asterisms } from "../AnimatedParticles/Asterisms";
-import { SpiralBliss } from "../AmbientCanvas";
+import { Asterisms } from "../FloatingParticles";
+import { NebulousBliss } from "../AmbientCanvas";
 import NavBar from "../NavBar";
-// import NavBarLanding from "../NavBarLanding";
 import Home from "../Home";
-// import HomeLanding from "../HomeLanding";
 import Bits from "../Bits";
 import Pieces from "../Pieces";
 import Human from "../Human";
+// import NavBarLanding from "../NavBarLanding";
+// import HomeLanding from "../HomeLanding";
 
 import "./style.css";
 import "./responsive.css";
@@ -43,8 +42,15 @@ class Main extends Component {
     console.log('--{ Main render cycle complete }--');
     console.log('');
 
-    /* JavaScript engine seems to run especially slowly on FireFox when processing Canvas + Typist. As a failsafe, setting background color to same as that of canvas. */
-    document.body.style.background = 'hsla(256,75%,50%,1)';
+    /* JavaScript engine seems to process animations especially slowly on FireFox when running Canvas + Typist. As a failsafe, setting background color to same as that of canvas. */
+    document.body.style.background = 
+      is.firefox() ?
+        `linear-gradient(
+          to right bottom,
+          hsla(256,75%,25%,1),
+          hsla(256,75%,50%,1),
+          hsla(345,75%,55%,1)
+        )` : `hsla(256,75%,50%,1)`;
     
     this.setState({
       browser: {
@@ -71,8 +77,7 @@ class Main extends Component {
     return (
       <Router>
         <div className="main">
-          {!is.firefox() && <SpiralBliss />}
-          {!is.firefox() && <ShootingStars />}
+          {!is.firefox() && <NebulousBliss />}
           {!is.firefox() && <Asterisms />}
           <NavBar />
           <div className="content">
