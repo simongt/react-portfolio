@@ -10,6 +10,9 @@
 * Improve the nav bar: hover styling ✓
 * Lazy load the project GIFs, then recreate GIFs for more uniformity (dimensions and quality)
 * Improve responsiveness for more mobile devices, especially Android based ✓
+* Improve IE compatibility.
+  * Fix CSS issue with content loading to the right.
 * Improve overall navbar responsiveness ✓
 * Make navbar sticky
 * Improve responsiveness of `<Human/>`, make the photo disappear for smaller screens
+* Add screenshots to readme.

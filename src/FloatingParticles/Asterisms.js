@@ -91,7 +91,7 @@ export default function Asterisms() {
           retina_detect: true
         }}
       />
-      <Particles
+      {/* <Particles
         style={{
           position: "absolute",
           top: "0",
@@ -134,7 +134,7 @@ export default function Asterisms() {
           },
           retina_detect: true
         }}
-      />
+      /> */}
       <Particles
         style={{
           position: "absolute",

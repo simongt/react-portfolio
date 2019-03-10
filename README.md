@@ -1,6 +1,30 @@
 # Portfolio App
 React-based app that uses JavaScript, CSS Grid + FlexBox to create a responsive portfolio website that alternates page views using React Router.
 
+If you clone/fork this repo, please bare in mind that some of the project is intentionally omitted (e.g. most assets in my `public` and `build` directory). You're welcome to use your own assets if you choose to use the source code available here.
+
+### Use provided `npm` scripts to get started. 
+From within the root directory of the cloned project, install dependencies by running: `npm install`. Then launch the Node server by running: `npm start`.
+
+## Cross Browser + Responsive Testing
+
+### Free Tools
+* [Browserling](https://browserling.com/)
+* [Browser Shots](http://browsershots.org/)
+* [Net Renderer](https://netrenderer.org/)
+
+### This app has been thoroughly tested for browser compatibility and overall responsiveness.
+Please feel free to test on any browser, resize the window to your heart's content and report any issues. 🤓
+
+### Firefox renders a different background that is NOT animated.
+This is due to the JavaScript engine performing very poorly with the animation libraries in use (Particles, Canvas, Typist, Reveal). It's in my [backlog](./BACKLOG.md) to improve upon. For now, I've configured the app to detect whether the browser is using Firefox, and manually override the background setting.
+
+### Only Firefox + Chrome browsers load the project containers in `<Bits /> using a scroll-on-reveal animation.
+This is due to quite a few browsers incorrectly loading containers when they are wrapped in any of `react-reveal`'s animation tags. They seem to load but remain invisible while somehow still being clickable / interactive. No bueño. 😩 For now, I've configured the app to detect the browser in use, and only allow Firefox + Chrome to use `react-reveal` animations.
+
+### IE loads all the content to the right.
+IE's gonna IE. 😑 It's in my [backlog](./BACKLOG.md).
+
 <details>
 
 <summary>This project was bootstrapped with Create React App.</summary>
@@ -11,6 +35,13 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Portfolio App](#portfolio-app)
+    - [Use provided `npm` scripts to get started.](#use-provided-npm-scripts-to-get-started)
+  - [Cross Browser + Responsive Testing](#cross-browser--responsive-testing)
+    - [Free Tools](#free-tools)
+    - [This app has been thoroughly tested for browser compatibility and overall responsiveness.](#this-app-has-been-thoroughly-tested-for-browser-compatibility-and-overall-responsiveness)
+    - [Firefox renders a different background that is NOT animated.](#firefox-renders-a-different-background-that-is-not-animated)
+    - [Only Firefox + Chrome browsers load the project containers in `<Bits /> using a scroll-on-reveal animation.](#only-firefox--chrome-browsers-load-the-project-containers-in-bits--using-a-scroll-on-reveal-animation)
+    - [IE loads all the content to the right.](#ie-loads-all-the-content-to-the-right)
   - [Table of Contents](#table-of-contents)
   - [Updating to New Releases](#updating-to-new-releases)
   - [Sending Feedback](#sending-feedback)
