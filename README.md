@@ -19,7 +19,7 @@ Please feel free to test on any browser, resize the window to your heart's conte
 ### Firefox renders a different background that is NOT animated.
 This is due to the JavaScript engine performing very poorly with the animation libraries in use (Particles, Canvas, Typist, Reveal). It's in my [backlog](./BACKLOG.md) to improve upon. For now, I've configured the app to detect whether the browser is using Firefox, and manually override the background setting.
 
-### Only Firefox + Chrome browsers load the project containers in `<Bits /> using a scroll-on-reveal animation.
+### Only Firefox + Chrome browsers load the project containers in `<Bits />` using a scroll-on-reveal animation.
 This is due to quite a few browsers incorrectly loading containers when they are wrapped in any of `react-reveal`'s animation tags. They seem to load but remain invisible while somehow still being clickable / interactive. No bueño. 😩 For now, I've configured the app to detect the browser in use, and only allow Firefox + Chrome to use `react-reveal` animations.
 
 ### IE loads all the content to the right.
@@ -40,7 +40,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
     - [Free Tools](#free-tools)
     - [This app has been thoroughly tested for browser compatibility and overall responsiveness.](#this-app-has-been-thoroughly-tested-for-browser-compatibility-and-overall-responsiveness)
     - [Firefox renders a different background that is NOT animated.](#firefox-renders-a-different-background-that-is-not-animated)
-    - [Only Firefox + Chrome browsers load the project containers in `<Bits /> using a scroll-on-reveal animation.](#only-firefox--chrome-browsers-load-the-project-containers-in-bits--using-a-scroll-on-reveal-animation)
+    - [Only Firefox + Chrome browsers load the project containers in `<Bits />` using a scroll-on-reveal animation.](#only-firefox--chrome-browsers-load-the-project-containers-in-bits--using-a-scroll-on-reveal-animation)
     - [IE loads all the content to the right.](#ie-loads-all-the-content-to-the-right)
   - [Table of Contents](#table-of-contents)
   - [Updating to New Releases](#updating-to-new-releases)
