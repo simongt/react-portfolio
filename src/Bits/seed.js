@@ -6,8 +6,8 @@ export const projects = [{
   gifUrl: '/img/bits/portfolio.gif',
   imgUrl: '/img/bits/portfolio.jpg',
   description: "Used React, JavaScript, CSS Grid + FlexBox to create a responsive portfolio website that alternates page views using React Router.",
-  live: 'https://simongt.net',
-  github: 'https://github.com/simongt/react-portfolio',
+  live: 'https://simongt.net/',
+  github: 'https://github.com/simongt/react-portfolio/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -16,7 +16,7 @@ export const projects = [{
   imgUrl: '/img/bits/connect-4.jpg',
   description: "Used HTML, CSS Grid, JavaScript (with jQuery) to create Connect Four, a turn-based game where players compete to form a connecting line of four discs on a grid.",
   live: 'https://simongt.github.io/connect-four/',
-  github: 'https://github.com/simongt/connect-four',
+  github: 'https://github.com/simongt/connect-four/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -25,7 +25,7 @@ export const projects = [{
   imgUrl: '/img/bits/not-pocket.jpg',
   description: "Used React, Node, Express and Postgres to create !Pocket, a content-aggregation and discovery platform that lets users manage collections of saved online articles.",
   live: 'https://notpocket.herokuapp.com/',
-  github: 'https://github.com/simongt/not-pocket',
+  github: 'https://github.com/simongt/not-pocket/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -34,7 +34,7 @@ export const projects = [{
   imgUrl: '/img/bits/to-do-react.jpg',
   description: "Used React, FlexBox, CSS and SVG's to build List Manager, a responsive, full CRUD app to organize various lists of tasks.",
   live: 'https://simongt.github.io/react-to-do-list/',
-  github: 'https://github.com/simongt/react-to-do-list',
+  github: 'https://github.com/simongt/react-to-do-list/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -43,7 +43,7 @@ export const projects = [{
   imgUrl: '/img/bits/tic-tac-toe.jpg',
   description: "Used HTML, CSS, FlexBox, JavaScript (with jQuery) to create Tic-Tac-Toe, a turn-based game where players compete to form a connecting line of three X's or O's on a grid.",
   live: 'https://simongt.github.io/tic-tac-toe/',
-  github: 'https://github.com/simongt/tic-tac-toe',
+  github: 'https://github.com/simongt/tic-tac-toe/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -61,7 +61,7 @@ export const projects = [{
   imgUrl: '/img/bits/infocusmedia-us.jpg',
   description: "Used HTML, CSS, Adobe Creative Suite and SmugMug's CMS to build a customized web platform for a creative media business that specializes in photography, videography, web and graphic design.",
   live: 'https://www.infocusmedia.us/',
-  github: '',
+  github: 'https://www.infocusmedia.us/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -70,7 +70,16 @@ export const projects = [{
   imgUrl: '/img/bits/ispot.jpg',
   description: "Used EJS, Node, Express and Postgres to create iSpot, a content-aggregation and discovery platform that lets users manage collections of saved locations.",
   live: 'https://ispot-app.herokuapp.com/',
-  github: 'https://github.com/simongt/ispot',
+  github: 'https://github.com/simongt/ispot/',
+  hidden: false,
+}, {
+  id: uuid.v4(),
+  title: "MemorEyes (VanillaJS)",
+  gifUrl: '/img/bits/memor-eyes.gif',
+  imgUrl: '/img/bits/memor-eyes.jpg',
+  description: "Used HTML, CSS + Flexbox, Vanilla JS to build MemorEyes, a simple memory-matching game that lets users flip cards to find pairs with matching ranks.",
+  live: 'https://simongt.github.io/memor-eyes/',
+  github: 'https://github.com/simongt/memor-eyes/',
   hidden: false,
 }, {
   id: uuid.v4(),
@@ -88,7 +97,7 @@ export const projects = [{
   imgUrl: '/img/bits/weather.jpg',
   description: "Used HTML, CSS, JavaScript (with jQuery) and the OpenWeatherMap API to create Weather Anywhere.",
   live: 'https://simongt.github.io/weather-checker/',
-  github: 'https://github.com/simongt/weather-checker',
+  github: 'https://github.com/simongt/weather-checker/',
   hidden: true,
 }, {
   id: uuid.v4(),
