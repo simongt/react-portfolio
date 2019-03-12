@@ -77,7 +77,7 @@ export const projects = [{
   title: "MemorEyes (VanillaJS)",
   gifUrl: '/img/bits/memor-eyes.gif',
   imgUrl: '/img/bits/memor-eyes.jpg',
-  description: "Used HTML, CSS + Flexbox, Vanilla JS to build MemorEyes, a simple memory-matching game that lets users flip cards to find pairs with matching ranks.",
+  description: "Used HTML, CSS + Flexbox, Vanilla JS to build MemorEyes, a memory game that lets users flip cards to find pairs with matching ranks.",
   live: 'https://simongt.github.io/memor-eyes/',
   github: 'https://github.com/simongt/memor-eyes/',
   hidden: false,
