@@ -11,6 +11,15 @@ export const projects = [{
   hidden: false,
 }, {
   id: uuid.v4(),
+  title: "Towers of Hanoi (React DnD)",
+  gifUrl: '/img/bits/towers-of-hanoi.gif',
+  imgUrl: '/img/bits/towers-of-hanoi.jpg',
+  description: "Used React, Redux, CSS Grid Layout and the React DnD API to build a clone of the classic math puzzle, Towers of Hanoi.",
+  live: 'https://simongt.github.io/towers-of-hanoi/',
+  github: 'https://github.com/simongt/towers-of-hanoi/',
+  hidden: false,
+}, {
+  id: uuid.v4(),
   title: "Connect Four (jQuery)",
   gifUrl: '/img/bits/connect-4.gif',
   imgUrl: '/img/bits/connect-4.jpg',
@@ -98,15 +107,6 @@ export const projects = [{
   description: "Used HTML, CSS, JavaScript (with jQuery) and the OpenWeatherMap API to create Weather Anywhere.",
   live: 'https://simongt.github.io/weather-checker/',
   github: 'https://github.com/simongt/weather-checker/',
-  hidden: true,
-}, {
-  id: uuid.v4(),
-  title: "",
-  gifUrl: '/img/bits/.gif',
-  imgUrl: '/img/bits/.jpg',
-  description: "",
-  live: 'https://',
-  github: 'https://github.com/simongt/',
   hidden: true,
 }, {
   id: uuid.v4(),
