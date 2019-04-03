@@ -7,7 +7,6 @@ import "./responsive.css";
 import { projects } from './seed';
 import Bit from "./Bit";
 
-
 class Bits extends Component {
 
   constructor(props) {

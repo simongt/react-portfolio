@@ -41,7 +41,8 @@ export class Bit extends Component {
         <div className="project-thumbnail">
           {/* live link */}
           <a href={live}>
-            <img src={gifUrl} alt={title} />
+            {/* <img className="static" src={imgUrl} alt={title} /> */}
+            <img className="active" src={gifUrl} alt={title} />
           </a>
         </div>
         {/* project description */}
