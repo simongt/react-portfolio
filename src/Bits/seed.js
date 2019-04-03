@@ -11,7 +11,7 @@ export const projects = [{
   hidden: false,
 }, {
   id: uuid.v4(),
-  title: "Towers of Hanoi (React DnD)",
+  title: "Towers of Hanoi (React)",
   gifUrl: '/img/bits/towers-of-hanoi.gif',
   imgUrl: '/img/bits/towers-of-hanoi.jpg',
   description: "Used React, Redux, CSS Grid Layout and the React DnD API to build a clone of the classic math puzzle, Towers of Hanoi.",
