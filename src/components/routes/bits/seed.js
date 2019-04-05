@@ -14,7 +14,7 @@ export const projects = [{
   title: "Towers of Hanoi (React)",
   gifUrl: '/img/bits/towers-of-hanoi.gif',
   imgUrl: '/img/bits/towers-of-hanoi.jpg',
-  description: "Used React, Redux, CSS Grid Layout and the React DnD API to build a clone of the classic math puzzle, Towers of Hanoi.",
+  description: "Used React, Redux, CSS Grid Layout and the React DnD (drag-and-drop) API to build a clone of the classic math puzzle, Towers of Hanoi.",
   live: 'https://simongt.github.io/towers-of-hanoi/',
   github: 'https://github.com/simongt/towers-of-hanoi/',
   hidden: false,

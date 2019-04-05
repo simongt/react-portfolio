@@ -6,23 +6,26 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { Asterisms } from "../FloatingParticles";
-import { NebulousBliss } from "../AmbientCanvas";
-import NavBar from "../NavBar";
-import Home from "../Home";
-import Bits from "../Bits";
-import Pieces from "../Pieces";
-import Human from "../Human";
-// import NavBarLanding from "../NavBarLanding";
-// import HomeLanding from "../HomeLanding";
+// Utilities
+import { Asterisms } from "./util/floating-particles";
+import { NebulousBliss } from "./util/ambient-canvas/AmbientCanvas";
 
-import "./style.css";
-import "./responsive.css";
+// Layout
+import NavBar from "./layout/nav-bar/NavBar";
 
-class Main extends Component {
+// Routes
+import Home from "./routes/home/Home";
+import Bits from "./routes/bits/Bits";
+import Pieces from "./routes/pieces/Pieces";
+import Human from "./routes/human/Human";
+
+import "../style/app.css";
+import "../style/app-media-queries.css";
+
+class App extends Component {
   constructor(props) {
     super(props);
-    console.log('Main --> constructor');
+    console.log('App --> constructor');
   
     this.state = {
       browser: {
@@ -38,8 +41,8 @@ class Main extends Component {
   }
   
   componentDidMount = () => {
-    console.log('Main --> componentDidMount');
-    console.log('--{ Main render cycle complete }--');
+    console.log('App --> componentDidMount');
+    console.log('--{ App render cycle complete }--');
     console.log('');
 
     /* JavaScript engine seems to process animations especially slowly on FireFox when running Canvas + Typist. As a failsafe, setting background color to same as that of canvas. */
@@ -67,13 +70,13 @@ class Main extends Component {
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('Main --> componentDidUpdate');
-    console.log('--{ Main render cycle complete }--');
+    console.log('App --> componentDidUpdate');
+    console.log('--{ App render cycle complete }--');
     console.log('');
   }
 
   render() {
-    console.log('Main --> render');
+    console.log('App --> render');
     const { browser } = this.state;
     return (
       <Router>
@@ -121,4 +124,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default App;
