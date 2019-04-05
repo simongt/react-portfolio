@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import is from "is_js";
 
-import { Asterisms } from "../FloatingParticles";
-import { NebulousBliss } from "../AmbientCanvas";
+import { Asterisms } from "./util/floating-particles";
+import { NebulousBliss } from "./util/ambient-canvas/AmbientCanvas";
 import NavBar from "../NavBar";
 import Home from "../Home";
 import Bits from "../Bits";
@@ -16,8 +16,8 @@ import Human from "../Human";
 // import NavBarLanding from "../NavBarLanding";
 // import HomeLanding from "../HomeLanding";
 
-import "./style.css";
-import "./responsive.css";
+import "../app.css";
+import "../app-media-queries.css";
 
 class Main extends Component {
   constructor(props) {
